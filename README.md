@@ -1,0 +1,2 @@
+# RISCV32-SingleCycle-NonPipelined-Processor
+ Includes the design and implementation of a 32-bit processor utilizing the RISC-V architecture with a single-cycle execution model. The processor is being developed using SystemVerilog. The single-cycle architecture simplifies the processor's operation, enabling all stages of instruction execution to occur within a single clock cycle. This is the first stage of a RISCV32 Single Cycle Processor Design project and only a non-pipelined processor is implemented here.
