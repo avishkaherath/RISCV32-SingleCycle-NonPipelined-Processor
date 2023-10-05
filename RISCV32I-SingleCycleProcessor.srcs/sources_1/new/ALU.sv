@@ -69,7 +69,7 @@ module ALU (
             end
         4'b0111: // SRA operation
             begin
-            ALU_out = $signed(A) >> B;
+            ALU_out = $signed(A) >>> B;
             zero = (ALU_out == 0);
             end
         4'b1000: // OR operation
