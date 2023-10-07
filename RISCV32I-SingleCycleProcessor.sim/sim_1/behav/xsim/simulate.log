@@ -1,3 +1,4 @@
 Time resolution is 1 ps
-All tests passed
-$finish called at time : 110 ns : File "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/ALU_tb.sv" Line 122
+Test case 2 failed
+Test case 3 failed
+$finish called at time : 50 ns : File "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/PC_tb.sv" Line 79
