@@ -59,22 +59,18 @@ module PC_InstructionMemory;
         #10 reset = 0; // De-assert reset
 
         #10
-        #10
-        #10
-        #10
+        
+        // Set the branch signal and offset as needed
+        // For example:
+        branch = 1;
+        branch_offset = 2;
+        #10;
 
-        // // Set the branch signal and offset as needed
-        // // For example:
-        // branch = 1;
-        // branch_offset = 8;
+        // Check negative offset
+        branch_offset = -3;
+        #10;
 
-        // // Observe the fetched instruction
-        // #10;
-        // $display("Fetched Instruction: %h", instruction);
-
-        // // Continue with your simulation and testing
-
-        // // Finish the simulation
+        // Finish the simulation
         $finish;
     end
 

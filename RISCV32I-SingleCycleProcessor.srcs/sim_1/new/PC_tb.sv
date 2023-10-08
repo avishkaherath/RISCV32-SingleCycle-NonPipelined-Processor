@@ -76,7 +76,8 @@ module PC_tb;
         
         branch = 0;
         #10;
-
+        
+        // Finish the simulation
         $finish;
     end
 

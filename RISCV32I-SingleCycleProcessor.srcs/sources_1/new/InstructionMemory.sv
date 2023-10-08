@@ -28,7 +28,7 @@ module InstructionMemory (
     // Define the memory contents as an array of 32-bit instructions
     logic [31:0] memory [0:63]; // 64 32-bit instructions
 
-    // Initialize the memory with sample R-type instructions
+    // R-type instructions
     initial begin
         memory[0] = 32'h00A30633; // ADD x6, x1, x2
         memory[1] = 32'h00B322B3; // SUB x5, x6, x7
@@ -42,8 +42,8 @@ module InstructionMemory (
         memory[9] = 32'h0163E733; // SLTU x14, x15, x14
     end
 
-    assign instruction = (address < 64) ? memory[address] : 32'h00000000; // Default to NOP if address is out of range
-
+    assign instruction = (address < 64) ? memory[address/4] : 32'h00000000; // Default to NOP if address is out of range
+    
 endmodule
 
 

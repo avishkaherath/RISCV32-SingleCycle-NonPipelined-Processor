@@ -38,30 +38,19 @@ module InstructionMemory_tb;
 
     // Testbench behavior
     initial begin
-        $dumpfile("InstructionMemory_tb.vcd");
-        $dumpvars(0, InstructionMemory_tb);
-        $display("Starting simulation...");
-
+        
         address = 0;
         // Read the first 5 instructions
         for (int i = 0; i < 5; i = i + 1) begin
-            // Wait for the rising edge of the clock
             @(posedge clk);
-            $display("Reading instruction at address %d: Expected = %h, Actual = %h", address, inst_mem.memory[address], instruction);
             address = address + 1;
         end
 
         // Read an out-of-range address
         address = 100;
-        // Wait for the rising edge of the clock
-        @(posedge clk);
-        $display("Reading instruction at out-of-range address %d: Expected = %h, Actual = %h", address, 32'h00000000, instruction);
 
         // Read the last instruction
         address = 9;
-        // Wait for the rising edge of the clock
-        @(posedge clk);
-        $display("Reading the last instruction at address %d: Expected = %h, Actual = %h", address, inst_mem.memory[address], instruction);
 
         // Finish the simulation
         $finish;

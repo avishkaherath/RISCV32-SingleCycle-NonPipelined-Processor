@@ -119,6 +119,7 @@ module ALU_tb;
         if (ALU_out !== 32'h00000000 || zero !== 1) $error("Test failed for default operation");
 
         $display("All tests passed");
+        // Finish the simulation
         $finish;
     end
 
