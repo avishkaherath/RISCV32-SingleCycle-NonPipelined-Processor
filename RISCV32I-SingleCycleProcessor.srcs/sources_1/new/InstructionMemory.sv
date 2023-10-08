@@ -42,7 +42,7 @@ module InstructionMemory (
         memory[9] = 32'h0163E733; // SLTU x14, x15, x14
     end
 
-    assign instruction = (address < 64) ? memory[address/4] : 32'h00000000; // Default to NOP if address is out of range
+    assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
     
 endmodule
 
