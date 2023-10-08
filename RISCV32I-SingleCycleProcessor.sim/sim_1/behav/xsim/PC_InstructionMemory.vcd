@@ -1,0 +1,91 @@
+$date
+   Sun Oct  8 14:06:06 2023
+$end
+$version
+  2020.2
+$end
+$timescale
+  1ps
+$end
+$scope module PC_InstructionMemory $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$var reg 1 # branch $end
+$var reg 32 $ branch_offset [31:0] $end
+$var wire 32 % pc_out [31:0] $end
+$var wire 32 & instruction [31:0] $end
+$scope module pc_inst $end
+$var wire 1 ' clk $end
+$var wire 1 ( reset $end
+$var wire 1 ) branch $end
+$var wire 32 * branch_offset [31:0] $end
+$var reg 32 + pc_out [31:0] $end
+$var reg 32 , pc_reg [31:0] $end
+$scope begin Block34_1 $end
+$var reg 32 - branch_offset_temp [31:0] $end
+$upscope $end
+$upscope $end
+$scope module inst_mem $end
+$var wire 32 % address [31:0] $end
+$var reg 32 . instruction [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+b0 $
+b0 %
+b101000110000011000110011 &
+0'
+1(
+0)
+b0 *
+b0 +
+b0 ,
+bx -
+b101000110000011000110011 .
+$end
+#5000
+1!
+1'
+#10000
+0!
+0"
+0'
+0(
+#15000
+1!
+b100 %
+b111000111000011010110011 &
+1'
+b100 +
+b100 ,
+b111000111000011010110011 .
+#20000
+0!
+0'
+#25000
+1!
+b1000 %
+b1010100111100011100110011 &
+1'
+b1000 +
+b1000 ,
+b1010100111100011100110011 .
+#30000
+0!
+0'
+#35000
+1!
+b1100 %
+bx &
+1'
+b1100 +
+b1100 ,
+bx .
+#40000
+0!
+0'
