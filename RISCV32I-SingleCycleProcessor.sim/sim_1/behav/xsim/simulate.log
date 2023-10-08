@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+Starting simulation...
+Reading instruction at address          0: Expected = 00a30633, Actual = 00a30633
+Reading instruction at address          1: Expected = 00b322b3, Actual = 00b322b3
+Reading instruction at address          2: Expected = 00c34333, Actual = 00c34333
+Reading instruction at address          3: Expected = 00d3e313, Actual = 00d3e313
+Reading instruction at address          4: Expected = 00e386b3, Actual = 00e386b3
+Reading instruction at out-of-range address        100: Expected = 00000000, Actual = 00000000
+Reading the last instruction at address          9: Expected = 0163e733, Actual = 0163e733
+$finish called at time : 65 ns : File "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/InstructionMemory_tb.sv" Line 67
