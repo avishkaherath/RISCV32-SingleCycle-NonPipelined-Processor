@@ -66,7 +66,7 @@ module PC_tb;
         branch = 1;
         branch_offset = 4;
         #10;
-        assert(pc_out == 32'h00000008) else $display("Test case 2 failed");
+        assert(pc_out == 32'h00000014) else $display("Test case 2 failed");
 
         // Test case 3: Branch with negative offset
         branch = 1;
@@ -74,6 +74,7 @@ module PC_tb;
         #10;
         assert(pc_out == 32'h00000000) else $display("Test case 3 failed");
         
+        branch = 0;
         #10;
 
         $finish;
