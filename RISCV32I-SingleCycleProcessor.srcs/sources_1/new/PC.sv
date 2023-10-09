@@ -37,9 +37,9 @@ module PC (
         if (reset)
             pc_reg <= 32'h00000000;  // Reset the PC to 0
         else if (branch) begin
-            branch_offset_temp = $signed(branch_offset); // Convert to signed value
-            branch_offset_temp = {{31{branch_offset_temp[31]}}, branch_offset_temp}; // Sign-extend to 32 bits
-            branch_offset_temp = branch_offset_temp << 2; // Word Addressing (maintain boundary)
+            // branch_offset_temp = $signed(branch_offset); // Convert to signed value
+            // branch_offset_temp = {{31{branch_offset_temp[31]}}, branch_offset_temp}; // Sign-extend to 32 bits
+            branch_offset_temp = branch_offset << 2; // Word Addressing (maintain boundary) // change branch_offset to branch_offset_temp
 
             if ($signed(pc_reg + branch_offset_temp) >= 0)
                 pc_reg <= pc_reg + branch_offset_temp; // Update PC if result is non-negative

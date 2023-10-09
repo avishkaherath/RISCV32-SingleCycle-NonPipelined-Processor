@@ -22,27 +22,29 @@
 
 module RegFile
 (
+    input logic clk,                    // Clock
     input logic [4:0]  read_register_1, // Read Register 1 index
     input logic [4:0]  read_register_2, // Read Register 2 index
     input logic [4:0]  write_register,  // Write Register index
-    input logic write_enable,    // Write enable signal
+    input logic write_enable,           // Write enable signal
     input logic [31:0] write_data,      // Data to be written
-    output logic [31:0] read_data_1,     // Data read from Register 1
-    output logic [31:0] read_data_2      // Data read from Register 2
+    input logic rst_n,                  // Reset
+    output logic [31:0] read_data_1,    // Data read from Register 1
+    output logic [31:0] read_data_2     // Data read from Register 2
 );
 
     // Declare an array to store the register values
-    logic [31:0] registers [31:0];
+    logic [31:0] registers [31:0] = '{default: 32'h0};
+    integer i;
 
     // Read data from the registers
     assign read_data_1 = (read_register_1 == 5'b0) ? 32'h0 : registers[read_register_1];
     assign read_data_2 = (read_register_2 == 5'b0) ? 32'h0 : registers[read_register_2];
 
     // Write data to the registers
-    always_ff @(posedge clk or posedge rst_n) begin
-        if (!rst_n) begin
-            // Asynchronous reset
-            registers <= '0;
+    always_ff @(posedge clk) begin
+        if (rst_n == 0) begin   // Synchronous active low reset            
+            registers = '{default: 32'h0};
         end else if (write_enable) begin
             if (write_register != 5'b0) begin
                 registers[write_register] <= write_data;

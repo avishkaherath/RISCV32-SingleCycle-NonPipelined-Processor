@@ -1,0 +1,133 @@
+$date
+   Mon Oct  9 09:10:51 2023
+$end
+$version
+  2020.2
+$end
+$timescale
+  1ps
+$end
+$scope module RegFile_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 5 # read_register_1 [4:0] $end
+$var reg 5 $ read_register_2 [4:0] $end
+$var reg 5 % write_register [4:0] $end
+$var reg 1 & write_enable $end
+$var reg 32 ' write_data [31:0] $end
+$var reg 32 ( read_data_1 [31:0] $end
+$var reg 32 ) read_data_2 [31:0] $end
+$scope module regfile $end
+$var wire 1 * clk $end
+$var wire 5 + read_register_1 [4:0] $end
+$var wire 5 , read_register_2 [4:0] $end
+$var wire 5 - write_register [4:0] $end
+$var wire 1 . write_enable $end
+$var wire 32 / write_data [31:0] $end
+$var wire 1 0 rst_n $end
+$var reg 32 ( read_data_1 [31:0] $end
+$var reg 32 ) read_data_2 [31:0] $end
+$var integer 32 1 i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+bx #
+bx $
+bx %
+x&
+bx '
+bx (
+bx )
+0*
+bx +
+bx ,
+bx -
+x.
+bx /
+00
+bx 1
+$end
+#5000
+1!
+1*
+b100000 1
+#10000
+0!
+1"
+0*
+10
+#15000
+1!
+1*
+#20000
+0!
+b11 #
+b0 (
+0*
+b11 +
+#25000
+1!
+1*
+#30000
+0!
+0*
+#35000
+1!
+1*
+#40000
+0!
+b11 %
+1&
+b10101011110011011110111100000001 '
+0*
+b11 -
+1.
+b10101011110011011110111100000001 /
+#45000
+1!
+b10101011110011011110111100000001 (
+bx )
+1*
+#50000
+0!
+0&
+0*
+0.
+#55000
+1!
+1*
+#60000
+0!
+b1 #
+b11 $
+b0 (
+b10101011110011011110111100000001 )
+0*
+b1 +
+b11 ,
+#65000
+1!
+1*
+#70000
+0!
+0"
+0*
+00
+#75000
+1!
+b0 (
+b0 )
+1*
+b100000 1
+#80000
+0!
+b11 $
+0*
+#85000
+1!
+1*
+b100000 1

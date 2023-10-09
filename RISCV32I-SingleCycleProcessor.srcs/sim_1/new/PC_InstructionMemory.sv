@@ -46,13 +46,15 @@ module PC_InstructionMemory;
     );
 
     // Clock generation
-    always #5 clk = ~clk;
+    always begin
+        clk = 0;
+        #5;
+        clk = 1;
+        #5;
+    end
 
     // Testbench behavior (for simulation)
     initial begin
-        $dumpfile("PC_InstructionMemory.vcd");
-        $dumpvars(0, PC_InstructionMemory);
-        $display("Starting simulation...");
 
         // Test with a sequence of operations
         reset = 1; // Assert reset
