@@ -41,6 +41,12 @@ module RegFile
     assign read_data_1 = (read_register_1 == 5'b0) ? 32'h0 : registers[read_register_1];
     assign read_data_2 = (read_register_2 == 5'b0) ? 32'h0 : registers[read_register_2];
 
+    initial begin
+        registers[6] = 32'd7; // Initialize register x6 with 10
+        registers[7] = 32'd10; // Initialize register x7 with 7
+    end
+
+
     // Write data to the registers
     always_ff @(posedge clk) begin
         if (rst_n == 0) begin   // Synchronous active low reset            

@@ -52,10 +52,12 @@ module ALU (
         4'b0011: // SLT operation
             begin
             ALU_out = $signed(A) < $signed(B);
+            zero = (ALU_out == 0);
             end
         4'b0100: // SLTU operation
             begin
             ALU_out = A < B;
+            zero = (ALU_out == 0);
             end
         4'b0101: // XOR operation
             begin

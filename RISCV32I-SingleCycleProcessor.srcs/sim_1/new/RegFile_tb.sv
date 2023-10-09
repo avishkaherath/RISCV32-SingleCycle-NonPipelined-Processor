@@ -53,29 +53,32 @@ module RegFile_tb;
 
     // Test stimulus
     initial begin
-        rst_n = 0; // Reset
-        #10 rst_n = 1; // De-assert reset after 10 time units
+        // rst_n = 0; // Reset
+        #10 rst_n = 1; // Normal operation
 
-        #10;
-        read_register_1 = 3;
-
-        // Perform a write operation to register 3
-        #20;
-        write_register = 3;
-        write_enable = 1;
-        write_data = 32'hABCDEF01;
-        #10 write_enable = 0;
-
-        // Perform read operations from registers 1 and 2
         #10;
         read_register_1 = 1;
-        read_register_2 = 3;
         #10;
+        read_register_1 = 2;
+        #10
 
-        rst_n = 0;
-        #10;
-        read_register_2 = 3;
-        #10;
+        // // Perform a write operation to register 3
+        // #20;
+        // write_register = 3;
+        // write_enable = 1;
+        // write_data = 32'hABCDEF01;
+        // #10 write_enable = 0;
+
+        // // Perform read operations from registers 1 and 2
+        // #10;
+        // read_register_1 = 1;
+        // read_register_2 = 3;
+        // #10;
+
+        // rst_n = 0;
+        // #10;
+        // read_register_2 = 3;
+        // #10;
 
         // End simulation
         $finish;

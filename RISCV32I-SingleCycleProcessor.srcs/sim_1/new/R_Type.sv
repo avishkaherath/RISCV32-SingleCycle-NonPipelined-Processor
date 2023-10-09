@@ -21,6 +21,7 @@
 
 
 module R_Type;
+
     logic clk = 0;
     logic reset = 0;
     logic branch = 0;
@@ -29,7 +30,6 @@ module R_Type;
     logic [31:0] instruction;
     logic rst_reg = 1;
     logic write_enable;
-    logic [31:0] write_data;
     logic [31:0] read_data_1, read_data_2;
     logic [3:0] ALU_op;
     logic [31:0] ALU_out;
@@ -65,7 +65,7 @@ module R_Type;
         .read_register_2(instruction[24:20]),
         .write_register(instruction[11:7]),
         .write_enable(write_enable),
-        .write_data(write_data),
+        .write_data(ALU_out),
         .read_data_1(read_data_1),
         .read_data_2(read_data_2)
     );
@@ -100,23 +100,12 @@ module R_Type;
 
     // Testbench behavior (for simulation)
     initial begin
+        reset = 1;
+        #7
+        reset = 0;
+        #3
 
-        // Test with a sequence of operations
-        reset = 1; // Assert reset
-        #10 reset = 0; // De-assert reset
-
-        #10
-        
-        // Set the branch signal and offset as needed
-        // For example:
-        branch = 1;
-        branch_offset = 2;
-        #10;
-
-        // Check negative offset
-        branch_offset = -3;
-        #10;
-
+        #95
         // Finish the simulation
         $finish;
     end

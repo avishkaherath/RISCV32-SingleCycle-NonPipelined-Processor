@@ -76,6 +76,39 @@ module Controller (
                             ALUOp = 4'b0001; // SUB
                         end                        
                     end
+                3'b001: // SLL
+                    begin
+                        ALUOp = 4'b0010;                        
+                    end
+                3'b010: // SLT
+                    begin
+                        ALUOp = 4'b0011;                                               
+                    end
+                3'b011: // SLTU
+                    begin
+                        ALUOp = 4'b0100;                                               
+                    end
+                3'b100: // XOR
+                    begin
+                        ALUOp = 4'b0101;                                               
+                    end
+                3'b101: // SRL/SRA
+                    begin
+                        if (funct7 == 7'b0000000) begin
+                            ALUOp = 4'b0110; // SRL                       
+                        end
+                        else begin
+                            ALUOp = 4'b0111; // SRA
+                        end                        
+                    end
+                3'b110: // OR
+                    begin
+                        ALUOp = 4'b1000;                                               
+                    end
+                3'b111: // AND
+                    begin
+                        ALUOp = 4'b1001;                                               
+                    end
                 default: // Default case
                     begin
                         ALUOp = 4'b0000;

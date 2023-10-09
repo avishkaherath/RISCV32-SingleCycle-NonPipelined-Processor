@@ -30,16 +30,16 @@ module InstructionMemory (
 
     // R-type instructions
     initial begin
-        memory[0] = 32'h00A30633; // ADD x6, x1, x2
-        memory[1] = 32'h00B322B3; // SUB x5, x6, x7
-        memory[2] = 32'h00C34333; // AND x6, x7, x8
-        memory[3] = 32'h00D3E313; // OR x1, x7, x14
-        memory[4] = 32'h00E386B3; // XOR x13, x15, x7
-        memory[5] = 32'h00F3C6B3; // SLL x13, x12, x15
-        memory[6] = 32'h01336433; // SRL x8, x12, x6
-        memory[7] = 32'h01436433; // SRA x8, x12, x6
-        memory[8] = 32'h0153C733; // SLT x14, x15, x12
-        memory[9] = 32'h0163E733; // SLTU x14, x15, x14
+        memory[0] = 32'h007302B3; // ADD
+        memory[1] = 32'h407302B3; // SUB
+        memory[2] = 32'h007372B3; // AND
+        memory[3] = 32'h007362B3; // OR
+        memory[4] = 32'h007342B3; // XOR
+        memory[5] = 32'h007312B3; // SLL
+        memory[6] = 32'h007352B3; // SRL
+        memory[7] = 32'h407352B3; // SRA
+        memory[8] = 32'h007322B3; // SLT
+        memory[9] = 32'h007332B3; // SLTU
     end
 
     assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
