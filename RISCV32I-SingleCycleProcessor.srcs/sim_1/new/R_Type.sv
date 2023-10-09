@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/08/2023 02:01:09 PM
+// Create Date: 10/09/2023 11:18:27 AM
 // Design Name: 
-// Module Name: PC_InstructionMemory
+// Module Name: R_Type
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,15 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC_InstructionMemory;
-
-    // Declare signals for the top-level module
+module R_Type;
     logic clk = 0;
     logic reset = 0;
     logic branch = 0;
     logic [31:0] branch_offset = 0;
-    logic [31:0] pc_out;
+    logic [31:0] address;
     logic [31:0] instruction;
+    logic rst_reg = 1;
+    logic [4:0] read_register_1, read_register_2, write_register;
+    logic write_enable;
+    logic [31:0] write_data;
+    logic [31:0] read_data_1, read_data_2;
+
 
     // Instantiate the PC module
     PC pc_inst (
@@ -36,13 +40,25 @@ module PC_InstructionMemory;
         .reset(reset),
         .branch(branch),
         .branch_offset(branch_offset),
-        .pc_out(pc_out)
+        .pc_out(address)
     );
 
     // Instantiate the InstructionMemory module
     InstructionMemory inst_mem (
-        .address(pc_out),
+        .address(address),
         .instruction(instruction)
+    );
+
+    RegFile reg_file (
+        .clk(clk),
+        .rst_n(rst_reg),
+        .read_register_1(read_register_1),
+        .read_register_2(read_register_2),
+        .write_register(write_register),
+        .write_enable(write_enable),
+        .write_data(write_data),
+        .read_data_1(read_data_1),
+        .read_data_2(read_data_2)
     );
 
     // Clock generation
