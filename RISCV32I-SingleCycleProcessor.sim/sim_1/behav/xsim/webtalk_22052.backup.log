@@ -2,11 +2,12 @@
 # Webtalk v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Oct  9 08:34:46 2023
-# Process ID: 3200
+# Start of session at: Wed Oct 11 21:12:06 2023
+# Process ID: 22052
 # Current directory: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim/xsim.dir/RegFile_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim/xsim.dir/ImmGen_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim/xsim.dir/RegFile_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/behav/xsim/xsim.dir/ImmGen_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 11 21:12:07 2023...
