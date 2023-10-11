@@ -23,12 +23,12 @@
 module Controller (
     input logic [31:0] instruction,
     output logic RegWrite,
-    output logic MemtoReg, RegtoMem,
-    output logic [3:0] ALUOp,
-    output logic ALUSrc,
-    output logic MemWrite,
-    output logic Branch,
-    output logic MemRead
+    // output logic MemtoReg, RegtoMem,
+    output logic [3:0] ALUOp
+    // output logic ALUSrc,
+    // output logic MemWrite,
+    // output logic Branch,
+    // output logic MemRead
 );
 
     // Extract sections from instructions
@@ -45,12 +45,12 @@ module Controller (
 
     // Set default control signals
     assign RegWrite = 1'b1;
-    assign MemtoReg = 1'b0;
-    assign RegtoMem = 1'b0;
-    assign ALUSrc = 1'b0;
-    assign MemWrite = 2'b0; // No memory write
-    assign Branch = 1'b0;
-    assign MemRead = 1'b0;
+    // assign MemtoReg = 1'b0;
+    // assign RegtoMem = 1'b0;
+    // assign ALUSrc = 1'b0;
+    // assign MemWrite = 2'b0; // No memory write
+    // assign Branch = 1'b0;
+    // assign MemRead = 1'b0;
     assign ALUOp = 4'b0000; // Default ALU control operation
 
     // Check if the instruction is an R-type instruction
@@ -58,12 +58,12 @@ module Controller (
         if (opcode == R_TYPE_OPCODE) begin
             // Set control signals for R-type instructions
             RegWrite = 1'b1;
-            MemtoReg = 1'b0;
-            RegtoMem = 1'b0;
-            ALUSrc = 1'b0;
-            MemWrite = 2'b0;
-            Branch = 1'b0;
-            MemRead = 1'b0;
+            // MemtoReg = 1'b0;
+            // RegtoMem = 1'b0;
+            // ALUSrc = 1'b0;
+            // MemWrite = 2'b0;
+            // Branch = 1'b0;
+            // MemRead = 1'b0;
 
             // Define cases for different ALU operations
             case (funct3)

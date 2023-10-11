@@ -31,16 +31,16 @@ module R_Type;
     logic rst_reg = 1;
     logic write_enable;
     logic [31:0] read_data_1, read_data_2;
-    logic [3:0] ALU_op;
+    // logic [3:0] ALU_op;
     logic [31:0] ALU_out;
     logic zero;
-    logic RegWrite;
-    logic MemtoReg, RegtoMem;
+    // logic RegWrite;
+    // logic MemtoReg, RegtoMem;
     logic [3:0] ALUOp;
-    logic ALUSrc;
-    logic MemWrite;
-    logic Branch;
-    logic MemRead;
+    // logic ALUSrc;
+    // logic MemWrite;
+    // logic Branch;
+    // logic MemRead;
 
 
     // Instantiate the PC module
@@ -81,13 +81,13 @@ module R_Type;
     Controller controller (
         .instruction(instruction),
         .RegWrite(write_enable),
-        .MemtoReg(MemtoReg),
-        .RegtoMem(RegtoMem),
-        .ALUOp(ALUOp),
-        .ALUSrc(ALUSrc),
-        .MemWrite(MemWrite),
-        .Branch(Branch),
-        .MemRead(MemRead)
+        // .MemtoReg(MemtoReg),
+        // .RegtoMem(RegtoMem),
+        .ALUOp(ALUOp)
+        // .ALUSrc(ALUSrc),
+        // .MemWrite(MemWrite),
+        // .Branch(Branch),
+        // .MemRead(MemRead)
     );
 
     // Clock generation
