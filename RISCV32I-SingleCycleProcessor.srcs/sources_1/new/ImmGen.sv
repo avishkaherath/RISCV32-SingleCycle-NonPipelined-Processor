@@ -20,39 +20,38 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ImmGen(
-  input logic [31:0] instruction,
-  output logic [31:0] immediate
+    input logic [31:0] instruction,
+    output logic [31:0] immediate
 );
 
-  logic [6:0] opcode = instruction[6:0];
-  logic [5:0] funct3 = instruction[14:12];
-  logic [11:0] imm1 = instruction[31:20];
-  logic [4:0] imm2 = instruction[11:7];
+    logic [6:0] opcode;
+    logic [5:0] funct3;
+    logic [11:0] imm1;
+    logic [4:0] imm2;
 
-  always_comb begin
-    case (opcode)
-        7'b1100111, 7'b0000011: immediate[11:0] = imm1;   // JALR, LB, LH, etc ...
-        7'b0010011: begin
+    assign opcode = instruction[6:0];
+    assign funct3 = instruction[14:12];
+    assign imm1 = instruction[31:20];
+    assign imm2 = instruction[11:7];
+
+    always_comb begin
+        case (opcode)
+            7'b1100111, 7'b0000011: immediate[11:0] = {imm1[11]? {20{1'b1}}: {20{1'b0}}, imm1};   // JALR, LB, LH, etc ...
+
+            7'b0010011: begin
             if (funct3 == 3'b001 || funct3 == 3'b101) begin
-                immediate[11:0] = {imm1[4]? 7'b1: 7'b0 , imm1[4:0]};   // SLLI, SRLI, SRAI            
+                immediate = {27'b0, imm1[4:0]}; // SLLI, SRLI, SRAI
             end
             else begin
-                immediate[11:0] = imm1;   // ADDI, SLTI, SLTIU, etc ...
+                immediate = {imm1[11]? {20{1'b1}}: {20{1'b0}}, imm1};   // ADDI, SLTI, SLTIU, etc ...
             end                        
-        end
-        
-        7'b1100011: immediate[11:0] = {imm1[11], imm2[0], imm1[10:0], imm2[4:1]};   // BEQ, BNE BLT, etc ...
+            end
 
-        default: immediate[11:0] = 12'b0;   // Default case
-    endcase
+            7'b1100011: immediate = {imm1[11]? {19{1'b1}}: {19{1'b0}}, imm1[11], imm2[0], imm1[10:5], imm2[4:1], 1'b0};   // BEQ, BNE BLT, etc ...
+            7'b0100011: immediate = {imm1[11]? {20{1'b1}}: {20{1'b0}}, imm1[11:5], imm2};   // SB, SH, SW
 
-    // Sign-extend the immediate
-    if (immediate[11]) begin
-        immediate[31:12] = {20'b1};
+            default: immediate = 32'b0;   // Default case
+        endcase
     end
-    else begin
-        immediate[31:12] = {20'b0};
-    end
-  end
 
 endmodule

@@ -1,6 +1,0 @@
-Time resolution is 1 ps
-Test Case 1 failed
-Test Case 2 failed
-Test Case 3 failed
-Test Case 4 failed
-$finish called at time : 40 ns : File "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/ImmGen_tb.sv" Line 56
