@@ -34,6 +34,7 @@ module R_Type;
     // logic [3:0] ALU_op;
     logic [31:0] ALU_out;
     logic zero;
+    logic BSel = 0;
     // logic RegWrite;
     // logic MemtoReg, RegtoMem;
     logic [3:0] ALUOp;
@@ -81,6 +82,7 @@ module R_Type;
     Controller controller (
         .instruction(instruction),
         .RegWrite(write_enable),
+        .BSel(BSel),
         // .MemtoReg(MemtoReg),
         // .RegtoMem(RegtoMem),
         .ALUOp(ALUOp)

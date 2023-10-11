@@ -21,14 +21,14 @@
 
 
 module ImmGen_tb;
-  logic [31:0] instruction;
-  logic [31:0] immediate;
+    logic [31:0] instruction;
+    logic [31:0] immediate;
 
   // Instantiate the ImmGen module
-  ImmGen immgen (
-    .instruction(instruction),
-    .immediate(immediate)
-  );
+    ImmGen immgen (
+        .instruction(instruction),
+        .immediate(immediate)
+    );
 
   // Stimulus generation
   initial begin
