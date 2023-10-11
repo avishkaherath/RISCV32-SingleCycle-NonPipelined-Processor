@@ -1,10 +1,14 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cafeb44a0f2545c580f910f7c9eb83eb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot I_Type_behav xil_defaultlib.I_Type xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cafeb44a0f2545c580f910f7c9eb83eb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot Load_behav xil_defaultlib.Load xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3823] variable 'RegWrite' might have multiple concurrent drivers [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Controller.sv:49]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'write_data' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/Load.sv:63]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'read_data' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/Load.sv:103]
+WARNING: [VRFC 10-3823] variable 'alu_B' might have multiple concurrent drivers [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/Load.sv:112]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'data0' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/Load.sv:109]
+WARNING: [VRFC 10-3823] variable 'RegWrite' might have multiple concurrent drivers [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Controller.sv:54]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -16,6 +20,7 @@ Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.Controller
 Compiling module xil_defaultlib.ImmGen
 Compiling module xil_defaultlib.Mux2
-Compiling module xil_defaultlib.I_Type
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.Load
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot I_Type_behav
+Built simulation snapshot Load_behav

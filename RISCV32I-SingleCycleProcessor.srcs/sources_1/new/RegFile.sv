@@ -51,7 +51,8 @@ module RegFile
     always_ff @(posedge clk) begin
         if (rst_n == 0) begin   // Synchronous active low reset            
             registers = '{default: 32'h0};
-        end else if (write_enable) begin
+        end 
+        else if (write_enable) begin
             if (write_register != 5'b0) begin
                 registers[write_register] <= write_data;
             end
