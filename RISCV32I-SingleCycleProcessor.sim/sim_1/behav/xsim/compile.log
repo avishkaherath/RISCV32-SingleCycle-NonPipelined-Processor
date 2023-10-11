@@ -14,4 +14,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acham/Documents/GitH
 INFO: [VRFC 10-311] analyzing module RegFile
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/I_Type.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module I_Type
-INFO: [VRFC 10-2458] undeclared symbol my_dataout, assumed default net type wire [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/I_Type.sv:92]

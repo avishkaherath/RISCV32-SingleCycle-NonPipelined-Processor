@@ -37,7 +37,6 @@ module I_Type;
     logic [3:0] ALUOp;
     logic [31:0] immediate;
 
-
     // Instantiate the PC module
     PC pc_inst (
         .clk(clk),
@@ -89,7 +88,7 @@ module I_Type;
         .data0(read_data_2),
         .data1(immediate),
         .BSel(BSel),
-        .dataout(my_dataout)
+        .dataout(alu_B)
     );
 
     // Clock generation
@@ -107,7 +106,7 @@ module I_Type;
         reset = 0;
         #3
 
-        #95
+        #75
         // Finish the simulation
         $finish;
     end

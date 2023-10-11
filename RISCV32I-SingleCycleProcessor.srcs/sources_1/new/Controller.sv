@@ -39,6 +39,7 @@ module Controller (
     // Instruction opcodes
     parameter R_TYPE_OPCODE = 7'b0110011;
     parameter I_TYPE_OPCODE = 7'b0010011;
+    parameter LOAD_OPCODE = 7'b0000011;
 
     // Set default control signals
     assign RegWrite = 1'b1;
@@ -110,6 +111,57 @@ module Controller (
         end
 
         if (opcode == I_TYPE_OPCODE) begin
+            // Set control signals for R-type instructions
+            RegWrite = 1'b1;
+            BSel = 1'b1;
+
+            // Define cases for different ALU operations
+            case (funct3)
+                3'b000: // ADDI
+                    begin
+                        ALUOp = 4'b0000;                        
+                    end
+                3'b001: // SLLI
+                    begin
+                        ALUOp = 4'b0010;                        
+                    end
+                3'b010: // SLTI
+                    begin
+                        ALUOp = 4'b0011;                                               
+                    end
+                3'b011: // SLTIU
+                    begin
+                        ALUOp = 4'b0100;                                               
+                    end
+                3'b100: // XORI
+                    begin
+                        ALUOp = 4'b0101;                                               
+                    end
+                3'b101: // SRLI/SRAI
+                    begin
+                        if (funct7 == 7'b0000000) begin
+                            ALUOp = 4'b0110; // SRLI                       
+                        end
+                        else begin
+                            ALUOp = 4'b0111; // SRAI
+                        end                        
+                    end
+                3'b110: // ORI
+                    begin
+                        ALUOp = 4'b1000;                                               
+                    end
+                3'b111: // ANDI
+                    begin
+                        ALUOp = 4'b1001;                                               
+                    end
+                default: // Default case
+                    begin
+                        ALUOp = 4'b0000;
+                    end
+            endcase
+        end
+
+        if (opcode == LOAD_OPCODE) begin
             // Set control signals for R-type instructions
             RegWrite = 1'b1;
             BSel = 1'b1;
