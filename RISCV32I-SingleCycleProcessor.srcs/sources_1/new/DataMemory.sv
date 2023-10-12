@@ -25,6 +25,7 @@ module DataMemory (
     input logic [31:0] write_data,
     input logic memRead, memWrite,
     output logic [31:0] read_data,
+    input logic [2:0] data_sel,
     input logic clk,
     input logic reset
 );
@@ -39,9 +40,26 @@ module DataMemory (
 
     always_comb begin
         if (memRead) begin
-                // Read from memory when memRead = 1
-                read_data <= memory[address];
-            end
+            case (data_sel)
+                2'b000: // LB (Load Byte)       
+                    read_data = {memory[address][7]? {24{1'b1}}: {24{1'b0}}, memory[address][7:0]};
+
+                2'b001: // LH (Load Halfword)
+                    read_data = {memory[address][15]? {16{1'b1}}: {16{1'b0}}, memory[address][15:0]};
+
+                2'b010: // LW (Load Word)
+                    read_data = memory[address];
+
+                2'b100: // LBU (Load Byte Unsigned)
+                    read_data = {24'b0, memory[address][7:0]};
+
+                2'b101: // LHU (Load Halfword Unsigned)
+                    read_data = {16'b0, memory[address][15:0]};
+
+                default: // LW (Load Word)
+                    read_data = memory[address];
+            endcase
+        end
     end
 
     always_ff @(posedge clk) begin
