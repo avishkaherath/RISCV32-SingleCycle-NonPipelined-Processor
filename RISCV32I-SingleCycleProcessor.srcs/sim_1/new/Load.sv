@@ -128,7 +128,7 @@ module Load;
         rst_pc = 0;
         #3
 
-        #105
+        #75
         // Finish the simulation
         $finish;
     end

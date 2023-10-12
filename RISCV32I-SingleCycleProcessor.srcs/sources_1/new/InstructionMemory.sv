@@ -44,7 +44,8 @@ module InstructionMemory (
         memory[5] = 32'h00534293; // XORI
         memory[6] = 32'h00537293; // ANDI
         memory[7] = 32'h00536293; // ORI
-        memory[8] = 32'h00932283; // LW
+        memory[2] = 32'h00932283; // LW
+        // memory[3] = 32'h01432283; // LW 2
     end
 
     assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
