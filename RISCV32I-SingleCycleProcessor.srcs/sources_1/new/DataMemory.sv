@@ -32,7 +32,7 @@ module DataMemory (
     logic [31:0] memory [0:63] = '{default: 32'h0};
 
     initial begin
-        memory[16] = 32'd26; // Initialize register x16 with 11
+        memory[16] = 32'd26; // Initialize register x16 with 26
         memory[7] = 32'd3; // Initialize register x7 with 3
     end
 
@@ -41,7 +41,7 @@ module DataMemory (
             // Reset the memory to all zeros            
             memory = '{default: 32'h0};
         end
-        else begin
+        else if (memWrite || memRead) begin
             if (memWrite) begin
                 // Write to memory when memWrite = 1
                 memory[address] <= write_data;
@@ -50,6 +50,9 @@ module DataMemory (
                 // Read from memory when memRead = 1
                 read_data <= memory[address];
             end
+        end
+        else begin  
+            read_data <= 32'b0;
         end
     end
 

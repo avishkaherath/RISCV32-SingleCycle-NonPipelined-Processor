@@ -23,25 +23,25 @@
 module Load;
 
     logic clk = 0;
-    logic reset = 0;
+    logic rst_pc = 0;
     logic branch = 0;
     logic [31:0] branch_offset = 0;
     logic [31:0] address;
     logic [31:0] instruction;
     logic rst_reg = 1;
     logic rst_mem = 1;
-    logic write_enable;
-    logic [31:0] read_data_1, read_data_2, alu_B;
+    logic write_enable = 1;
+    logic [31:0] read_data_1, read_data_2, alu_B, write_data;
     logic [31:0] ALU_out;
     logic zero, memRead, memWrite;
     logic BSel, WSel;
     logic [3:0] ALUOp;
-    logic [31:0] immediate;
+    logic [31:0] immediate, data_out;
 
     // Instantiate the PC module
     PC pc_inst (
         .clk(clk),
-        .reset(reset),
+        .reset(rst_pc),
         .branch(branch),
         .branch_offset(branch_offset),
         .pc_out(address)
@@ -60,7 +60,7 @@ module Load;
         .read_register_2(instruction[24:20]),
         .write_register(instruction[11:7]),
         .write_enable(write_enable),
-        .write_data(data_out),
+        .write_data(write_data),
         .read_data_1(read_data_1),
         .read_data_2(read_data_2)
     );
@@ -106,10 +106,10 @@ module Load;
     );
 
     Mux2 wmux (
-        .data0(WSel),
-        .data1(immediate),
-        .BSel(BSel),
-        .dataout(alu_B)
+        .data0(data_out),
+        .data1(ALU_out),
+        .BSel(WSel),
+        .dataout(write_data)
     );
 
 
@@ -123,12 +123,12 @@ module Load;
 
     // Testbench behavior (for simulation)
     initial begin
-        reset = 1;
+        rst_pc = 1;
         #7
-        reset = 0;
+        rst_pc = 0;
         #3
 
-        #75
+        #105
         // Finish the simulation
         $finish;
     end
