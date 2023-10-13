@@ -47,7 +47,7 @@ module PC (
                 pc_reg <= 32'h00000000; // Reset PC to 0 if result is negative
         end
         else
-            pc_reg <= pc_reg + 4;   // Increment PC by 4 for the next instruction
+            pc_reg <= pc_reg + 1;   // Increment PC by 1 (word addresible) for the next instruction
     end
 
     assign pc_out = pc_reg;

@@ -56,6 +56,6 @@ module InstructionMemory (
         memory[7] = 32'h00536293; // ORI
     end
 
-    assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
+    assign instruction = (address < 64) ? memory[address] : 32'h00000000; // Default to NOP if address is out of range
     
 endmodule
