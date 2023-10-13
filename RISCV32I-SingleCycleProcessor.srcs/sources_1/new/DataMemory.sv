@@ -39,7 +39,7 @@ module DataMemory (
     end
 
     always_comb begin
-        if (memRead) begin
+        if (memRead) begin      // Read from memory when memRead = 1
             case (data_sel)
                 3'b000: // LB (Load Byte)       
                     read_data = {memory[address][7]? {24{1'b1}}: {24{1'b0}}, memory[address][7:0]};
@@ -56,7 +56,7 @@ module DataMemory (
                 3'b101: // LHU (Load Halfword Unsigned)
                     read_data = {16'b0, memory[address][15:0]};
 
-                default: // LW (Load Word)
+                default: // LW (Default Load Word)
                     read_data = memory[address];
             endcase
         end
@@ -68,9 +68,20 @@ module DataMemory (
             memory = '{default: 32'h0};
         end
         else begin
-            if (memWrite) begin
-                // Write to memory when memWrite = 1
-                memory[address] <= write_data;
+            if (memWrite) begin     // Write to memory when memWrite = 1
+                case (data_sel)
+                    3'b000: // SB (Store Byte)       
+                        memory[address] <= {24'b0, write_data[7:0]};
+
+                    3'b001: // SH (Store Halfword)
+                        memory[address] <= {16'b0, write_data[15:0]};
+
+                    3'b010: // SW (Store Word)
+                        memory[address] <= write_data;
+
+                    default: // SW (Default Store Word)
+                        memory[address] <= write_data;
+                endcase
             end
         end
     end

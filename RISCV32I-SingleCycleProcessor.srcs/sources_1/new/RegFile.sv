@@ -44,6 +44,7 @@ module RegFile
     initial begin
         registers[6] = 32'd7; // Initialize register x6 with 7
         registers[7] = 32'd10; // Initialize register x7 with 10
+        registers[8] = 32'h01CF5E5B; // Initialize register x8
     end
 
 

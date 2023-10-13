@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/12/2023 03:04:30 AM
+// Create Date: 10/13/2023 06:47:15 PM
 // Design Name: 
-// Module Name: Load
+// Module Name: Store
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Load;
+module Store;
 
     logic clk = 0;
     logic rst_pc = 0;

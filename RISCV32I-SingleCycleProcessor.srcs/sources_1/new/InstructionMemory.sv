@@ -44,10 +44,13 @@ module InstructionMemory (
         // memory[5] = 32'h00534293; // XORI
         // memory[6] = 32'h00537293; // ANDI
         // memory[7] = 32'h00536293; // ORI
-        memory[2] = 32'h00932283; // LW
+        // memory[2] = 32'h00932283; // LW
         // memory[3] = 32'h01432283; // LW 2
-        memory[3] = 32'h00931283; // LH
-        memory[4] = 32'h00930283; // LB
+        // memory[3] = 32'h00931283; // LH
+        // memory[4] = 32'h00930283; // LB
+        memory[2] = 32'h008324a3; // SW
+        memory[3] = 32'h008314a3; // SH
+        memory[4] = 32'h008304a3; // SB
         memory[5] = 32'h00934283; // LBU
         memory[6] = 32'h00935283; // LHU
         memory[7] = 32'h00536293; // ORI

@@ -25,7 +25,7 @@ module Controller (
     output logic RegWrite,
     output logic BSel, WSel,
     output logic memRead, memWrite,
-    output logic [2:0] readSel,
+    output logic [2:0] dataSel,
     output logic [3:0] ALUOp
 );
 
@@ -42,6 +42,7 @@ module Controller (
     parameter R_TYPE_OPCODE = 7'b0110011;
     parameter I_TYPE_OPCODE = 7'b0010011;
     parameter LOAD_OPCODE = 7'b0000011;
+    parameter STORE_OPCODE = 7'b0100011;
 
     // Set default control signals
     assign RegWrite = 1'b1;
@@ -50,7 +51,7 @@ module Controller (
     assign memRead = 1'b0;
     assign memWrite = 1'b0;
     assign WSel = 1'b1;
-    assign readSel = 3'b0;
+    assign dataSel = 3'b0;
 
     // Check if the instruction is an R-type instruction
     always_comb begin
@@ -180,19 +181,19 @@ module Controller (
             WSel = 1'b0;
             ALUOp = 4'b0000;
 
-            readSel = funct3;
+            dataSel = funct3;
+        end
 
-            // // Define cases for different ALU operations
-            // case (funct3)
-            //     3'b000: // ADDI
-            //         begin
-            //             ALUOp = 4'b0000;                        
-            //         end
-            //     default: // Default case
-            //         begin
-            //             ALUOp = 4'b0000;
-            //         end
-            // endcase
+        if (opcode == STORE_OPCODE) begin
+            // Set control signals for Store instructions
+            RegWrite = 1'b0;
+            BSel = 1'b1;
+            memWrite = 1'b1;
+            memRead = 1'b0;
+            WSel = 1'b1;
+            ALUOp = 4'b0000;
+
+            dataSel = funct3;
         end
     end
 
