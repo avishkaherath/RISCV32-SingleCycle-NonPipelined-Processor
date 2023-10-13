@@ -25,7 +25,7 @@ module Controller (
     output logic RegWrite,
     output logic BSel, WSel,
     output logic memRead, memWrite,
-    output logic [2:0] loadSel,
+    output logic [2:0] readSel,
     output logic [3:0] ALUOp
 );
 
@@ -50,7 +50,7 @@ module Controller (
     assign memRead = 1'b0;
     assign memWrite = 1'b0;
     assign WSel = 1'b1;
-    assign loadSel = 3'b0;
+    assign readSel = 3'b0;
 
     // Check if the instruction is an R-type instruction
     always_comb begin
@@ -180,7 +180,7 @@ module Controller (
             WSel = 1'b0;
             ALUOp = 4'b0000;
 
-            loadSel = funct3;
+            readSel = funct3;
 
             // // Define cases for different ALU operations
             // case (funct3)

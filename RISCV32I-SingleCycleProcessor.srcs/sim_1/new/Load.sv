@@ -36,7 +36,7 @@ module Load;
     logic zero, memRead, memWrite;
     logic BSel, WSel;
     logic [3:0] ALUOp;
-    logic [2:0] loadSel;
+    logic [2:0] readSel;
     logic [31:0] immediate, data_out;
 
     // Instantiate the PC module
@@ -80,7 +80,7 @@ module Load;
         .BSel(BSel),
         .WSel(WSel),
         .ALUOp(ALUOp),
-        .loadSel(loadSel),
+        .readSel(readSel),
         .memRead(memRead),
         .memWrite(memWrite)
     );
@@ -105,7 +105,7 @@ module Load;
         .read_data(data_out),
         .clk(clk),
         .reset(rst_mem),
-        .data_sel(loadSel)
+        .data_sel(readSel)
     );
 
     Mux2 wmux (

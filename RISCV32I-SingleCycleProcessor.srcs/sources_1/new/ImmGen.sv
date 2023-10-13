@@ -36,7 +36,7 @@ module ImmGen(
 
     always_comb begin
         case (opcode)
-            7'b1100111, 7'b0000011: immediate[11:0] = {imm1[11]? {20{1'b1}}: {20{1'b0}}, imm1};   // JALR, LB, LH, etc ...
+            7'b1100111, 7'b0000011: immediate = {imm1[11]? {20{1'b1}}: {20{1'b0}}, imm1};   // JALR, LB, LH, etc ...
 
             7'b0010011: begin
             if (funct3 == 3'b001 || funct3 == 3'b101) begin
