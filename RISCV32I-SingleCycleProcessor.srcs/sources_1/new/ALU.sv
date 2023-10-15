@@ -86,8 +86,8 @@ module ALU (
             end
         default: // Default case
             begin
-            ALU_out = 32'h0;
-            zero = 1'b1;
+            ALU_out = B;
+            zero = (ALU_out == 0);
             end
         endcase
     end

@@ -49,6 +49,7 @@ module InstructionMemory (
         // memory[3] = 32'h00931283; // LH
         // memory[4] = 32'h00930283; // LB
         memory[1] = 32'h00731463; // BNE
+        // memory[1] = 32'h008302e7; // JALR
         memory[2] = 32'h008324a3; // SW
         memory[3] = 32'h008314a3; // SH
         memory[4] = 32'h008304a3; // SB

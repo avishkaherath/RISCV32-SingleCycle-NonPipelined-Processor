@@ -24,8 +24,9 @@ module Controller (
     input logic [31:0] instruction,
     input logic BrEq, BrLT,
     output logic RegWrite,
-    output logic BSel, WSel, BrUn,
-    output logic memRead, memWrite, branch,
+    output logic BSel, BrUn,
+    output logic [1:0] WSel, branch,
+    output logic memRead, memWrite,
     output logic [2:0] dataSel,
     output logic [3:0] ALUOp
 );
@@ -45,6 +46,7 @@ module Controller (
     parameter LOAD_OPCODE = 7'b0000011;
     parameter STORE_OPCODE = 7'b0100011;
     parameter B_TYPE_OPCODE = 7'b1100011;
+    parameter JALR_OPCODE = 7'b1100111;
 
     // Set default control signals
     assign RegWrite = 1'b1;
@@ -52,10 +54,10 @@ module Controller (
     assign ALUOp = 4'b0000; // Default ALU control operation
     assign memRead = 1'b0;
     assign memWrite = 1'b0;
-    assign WSel = 1'b1;
+    assign WSel = 2'b01;
     assign dataSel = 3'b0;
     assign BrUn = 1'b0;
-    assign branch = 1'b0;
+    assign branch = 2'b00;
 
     // Check if the instruction is an R-type instruction
     always_comb begin
@@ -69,8 +71,8 @@ module Controller (
             memWrite = 1'b0;
             // Branch = 1'b0;
             memRead = 1'b0;
-            WSel = 1'b1;
-            branch = 1'b0;
+            WSel = 2'b01;
+            branch = 2'b00;
 
             // Define cases for different ALU operations
             case (funct3)
@@ -129,8 +131,8 @@ module Controller (
             BSel = 1'b1;
             memWrite = 1'b0;
             memRead = 1'b0;
-            WSel = 1'b1;
-            branch = 1'b0;
+            WSel = 2'b01;
+            branch = 2'b00;
 
             // Define cases for different ALU operations
             case (funct3)
@@ -184,9 +186,9 @@ module Controller (
             BSel = 1'b1;
             memWrite = 1'b0;
             memRead = 1'b1;
-            WSel = 1'b0;
+            WSel = 2'b00;
             ALUOp = 4'b0000;
-            branch = 1'b0;
+            branch = 2'b00;
 
             dataSel = funct3;
         end
@@ -197,9 +199,9 @@ module Controller (
             BSel = 1'b1;
             memWrite = 1'b1;
             memRead = 1'b0;
-            WSel = 1'b1;
+            WSel = 2'b01;
             ALUOp = 4'b0000;
-            branch = 1'b0;
+            branch = 2'b00;
 
             dataSel = funct3;
         end
@@ -207,11 +209,11 @@ module Controller (
         if (opcode == B_TYPE_OPCODE) begin
             // Set control signals for B-type instructions
             RegWrite = 1'b0;
-            BSel = 1'bZ;
+            BSel = 1'b1;
             memWrite = 1'b0;
             memRead = 1'b0;
-            WSel = 1'bZ;
-            ALUOp = 4'bZ;
+            WSel = 2'bZZ;
+            ALUOp = 4'b1111;
             dataSel = 3'bZ;
 
             case (funct3)
@@ -219,49 +221,63 @@ module Controller (
                     begin
                         BrUn = 1'b0;
                         if (BrEq == 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                        
                     end
                 3'b001: // BNE
                     begin
                         BrUn = 1'b0;
                         if (BrEq != 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                        
                     end
                 3'b100: // BLT
                     begin
                         BrUn = 1'b0;
                         if (BrLT == 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                                               
                     end
                 3'b101: // BGE
                     begin
                         BrUn = 1'b0;
                         if (BrEq == 1'b1 || BrLT != 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                                               
                     end
                 3'b110: // BLTU
                     begin
                         BrUn = 1'b1;
                         if (BrLT == 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                                               
                     end
                 3'b111: // BGEU
                     begin
                         BrUn = 1'b1;
                         if (BrEq == 1'b1 || BrLT != 1'b1) begin
-                            branch = 1'b1;                     
+                            branch = 2'b01;                     
                         end                        
                     end            
                 default: // Default case
                     begin
-                        branch = 1'b0;
+                        branch = 2'b00;
                     end
             endcase
+        end
+
+        if (opcode == JALR_OPCODE) begin
+            // Set control signals for B-type instructions
+            RegWrite = 1'b1;
+            BSel = 1'b1;
+            memWrite = 1'b0;
+            memRead = 1'b0;
+            WSel = 2'b10;
+            ALUOp = 4'b0000;
+            dataSel = 3'bZ;
+            BrUn = 1'b0;
+            branch = 2'b10;
+
         end
     end
 
