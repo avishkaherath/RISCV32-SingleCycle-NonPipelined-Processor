@@ -76,17 +76,17 @@ module JALR;
 
     Controller controller (
         .instruction(instruction),
-        .RegWrite(write_enable),
-        .BSel(BSel),
-        .WSel(WSel),
-        .ALUOp(ALUOp),
+        .regWrite(write_enable),
+        .branchSel(BSel),
+        .writeSel(WSel),
+        .ALUop(ALUOp),
         .dataSel(readSel),
         .memRead(memRead),
         .memWrite(memWrite),
         .branch(branch),
-        .BrUn(BrUn),
-        .BrEq(BrEq),
-        .BrLT(BrLT)
+        .unsignedComp(BrUn),
+        .branchEq(BrEq),
+        .branchLT(BrLT)
     );
 
     ImmGen immgen (
