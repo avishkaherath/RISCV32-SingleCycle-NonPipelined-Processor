@@ -1,32 +1,13 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/08/2023 09:07:56 AM
-// Design Name: 
-// Module Name: InstructionMemory
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module InstructionMemory (
     input logic [31:0] address,
     output logic [31:0] instruction
 );
 
-    // Define the memory contents as an array of 32-bit instructions
-    logic [31:0] memory [0:63] = '{default: 32'h0}; // 64 32-bit instructions
+    parameter MEM_SIZE = 64;    // No. of memory blocks
+
+    logic [31:0] memory [0:MEM_SIZE-1] = '{default: 32'h0}; // Memory as an array of n(MEM_SIZE) 32-bit instructions
 
     // R-type instructions
     initial begin
@@ -58,6 +39,6 @@ module InstructionMemory (
         memory[7] = 32'h00536293; // ORI
     end
 
-    assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
+    assign instruction = (address < MEM_SIZE) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
     
 endmodule

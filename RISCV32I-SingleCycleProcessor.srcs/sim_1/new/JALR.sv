@@ -44,8 +44,8 @@ module JALR;
         .clk(clk),
         .reset(rst_pc),
         .branch(branch),
-        .branch_offset(ALU_out),
-        .pc_out(address)
+        .offset(ALU_out),
+        .PCout(address)
     );
 
     // Instantiate the InstructionMemory module
@@ -56,21 +56,21 @@ module JALR;
 
     RegFile reg_file (
         .clk(clk),
-        .rst_n(rst_reg),
-        .read_register_1(instruction[19:15]),
-        .read_register_2(instruction[24:20]),
-        .write_register(instruction[11:7]),
-        .write_enable(write_enable),
-        .write_data(write_data),
-        .read_data_1(read_data_1),
-        .read_data_2(read_data_2)
+        .reset(rst_reg),
+        .readReg1(instruction[19:15]),
+        .readReg2(instruction[24:20]),
+        .writeReg(instruction[11:7]),
+        .writeEn(write_enable),
+        .writeData(write_data),
+        .readData1(read_data_1),
+        .readData2(read_data_2)
     );
 
     ALU alu (
-        .A(read_data_1),
-        .B(alu_B),
-        .ALU_op(ALUOp),
-        .ALU_out(ALU_out),
+        .inA(read_data_1),
+        .inB(alu_B),
+        .ALUop(ALUOp),
+        .ALUout(ALU_out),
         .zero(zero)
     );
 
@@ -97,35 +97,35 @@ module JALR;
     Mux2 bmux (
         .data0(read_data_2),
         .data1(immediate),
-        .BSel(BSel),
+        .select(BSel),
         .dataout(alu_B)
     );
 
-    DataMemory data_mem(
+    DataMemory dataMem(
         .address(ALU_out),
-        .write_data(read_data_2),
+        .writeData(read_data_2),
         .memRead(memRead),
         .memWrite(memWrite),
-        .read_data(data_out),
+        .readData(data_out),
         .clk(clk),
         .reset(rst_mem),
-        .data_sel(readSel)
+        .dataSel(readSel)
     );
 
     Mux4 wmux (
         .data0(data_out),
         .data1(ALU_out),
         .data2(address),
-        .Sel(WSel),
+        .select(WSel),
         .dataout(write_data)
     );
 
     BranchComparator branComp (
-        .input1(read_data_1),
-        .input2(read_data_2),
+        .inA(read_data_1),
+        .inB(read_data_2),
         .unsignedComp(BrUn),
         .equal(BrEq),
-        .less_than(BrLT)
+        .lessThan(BrLT)
     );
 
     // Clock generation
