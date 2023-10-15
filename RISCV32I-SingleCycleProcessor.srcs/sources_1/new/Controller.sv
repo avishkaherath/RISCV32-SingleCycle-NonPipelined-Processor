@@ -22,15 +22,15 @@ module Controller (
     parameter JALR_OPCODE = 7'b1100111;
 
     // Set default control signals
-    assign regWrite = 1'b1;
-    assign branchSel = 1'b0;
-    assign ALUop = 4'b0000;
-    assign memRead = 1'b0;
-    assign memWrite = 1'b0;
-    assign writeSel = 2'b01;
-    assign dataSel = 3'b0;
-    assign unsignedComp = 1'b0;
-    assign branch = 2'b00;
+    assign regWrite = 1'b1; // 1
+    assign branchSel = 1'b0;    // 2
+    assign ALUop = 4'b0000; // 9
+    assign memRead = 1'b0;  // 3
+    assign memWrite = 1'b0; // 4
+    assign writeSel = 2'b01;    // 7
+    assign dataSel = 3'b0;  // 8
+    assign unsignedComp = 1'b0; // 5
+    assign branch = 2'b00;  // 6
 
     // Check if the instruction is an R-type instruction
     always_comb begin

@@ -1,4 +1,7 @@
-Running: xsim.dir/JALR_behav/xsimk.exe -simmode gui -wdb JALR_behav.wdb -simrunnum 0 -socket 6194
+Running: xsim.dir/JALR_behav/xsimk.exe -simmode gui -wdb JALR_behav.wdb -simrunnum 0 -socket 5744
 Design successfully loaded
-Design Loading Memory Usage: 7528 KB (Peak: 7528 KB)
+Design Loading Memory Usage: 7608 KB (Peak: 7608 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8472 KB (Peak: 8472 KB)
+Simulation CPU Usage: 0 ms
