@@ -22,9 +22,10 @@
 
 module Controller (
     input logic [31:0] instruction,
+    input logic BrEq, BrLT,
     output logic RegWrite,
-    output logic BSel, WSel,
-    output logic memRead, memWrite,
+    output logic BSel, WSel, BrUn,
+    output logic memRead, memWrite, branch,
     output logic [2:0] dataSel,
     output logic [3:0] ALUOp
 );
@@ -43,6 +44,7 @@ module Controller (
     parameter I_TYPE_OPCODE = 7'b0010011;
     parameter LOAD_OPCODE = 7'b0000011;
     parameter STORE_OPCODE = 7'b0100011;
+    parameter B_TYPE_OPCODE = 7'b1100011;
 
     // Set default control signals
     assign RegWrite = 1'b1;
@@ -52,6 +54,8 @@ module Controller (
     assign memWrite = 1'b0;
     assign WSel = 1'b1;
     assign dataSel = 3'b0;
+    assign BrUn = 1'b0;
+    assign branch = 1'b0;
 
     // Check if the instruction is an R-type instruction
     always_comb begin
@@ -66,6 +70,7 @@ module Controller (
             // Branch = 1'b0;
             memRead = 1'b0;
             WSel = 1'b1;
+            branch = 1'b0;
 
             // Define cases for different ALU operations
             case (funct3)
@@ -125,6 +130,7 @@ module Controller (
             memWrite = 1'b0;
             memRead = 1'b0;
             WSel = 1'b1;
+            branch = 1'b0;
 
             // Define cases for different ALU operations
             case (funct3)
@@ -180,6 +186,7 @@ module Controller (
             memRead = 1'b1;
             WSel = 1'b0;
             ALUOp = 4'b0000;
+            branch = 1'b0;
 
             dataSel = funct3;
         end
@@ -192,8 +199,69 @@ module Controller (
             memRead = 1'b0;
             WSel = 1'b1;
             ALUOp = 4'b0000;
+            branch = 1'b0;
 
             dataSel = funct3;
+        end
+
+        if (opcode == B_TYPE_OPCODE) begin
+            // Set control signals for B-type instructions
+            RegWrite = 1'b0;
+            BSel = 1'bZ;
+            memWrite = 1'b0;
+            memRead = 1'b0;
+            WSel = 1'bZ;
+            ALUOp = 4'bZ;
+            dataSel = 3'bZ;
+
+            case (funct3)
+                3'b000: // BEQ
+                    begin
+                        BrUn = 1'b0;
+                        if (BrEq == 1'b1) begin
+                            branch = 1'b1;                     
+                        end                        
+                    end
+                3'b001: // BNE
+                    begin
+                        BrUn = 1'b0;
+                        if (BrEq != 1'b1) begin
+                            branch = 1'b1;                     
+                        end                        
+                    end
+                3'b100: // BLT
+                    begin
+                        BrUn = 1'b0;
+                        if (BrLT == 1'b1) begin
+                            branch = 1'b1;                     
+                        end                                               
+                    end
+                3'b101: // BGE
+                    begin
+                        BrUn = 1'b0;
+                        if (BrEq == 1'b1 || BrLT != 1'b1) begin
+                            branch = 1'b1;                     
+                        end                                               
+                    end
+                3'b110: // BLTU
+                    begin
+                        BrUn = 1'b1;
+                        if (BrLT == 1'b1) begin
+                            branch = 1'b1;                     
+                        end                                               
+                    end
+                3'b111: // BGEU
+                    begin
+                        BrUn = 1'b1;
+                        if (BrEq == 1'b1 || BrLT != 1'b1) begin
+                            branch = 1'b1;                     
+                        end                        
+                    end            
+                default: // Default case
+                    begin
+                        branch = 1'b0;
+                    end
+            endcase
         end
     end
 

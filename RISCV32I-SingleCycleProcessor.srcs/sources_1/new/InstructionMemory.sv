@@ -40,7 +40,7 @@ module InstructionMemory (
         // memory[7] = 32'h407352B3; // SRA
         // memory[8] = 32'h007322B3; // SLT
         // memory[9] = 32'h007332B3; // SLTU
-        memory[1] = 32'hFF930293; // ADDI
+        // memory[1] = 32'hFF930293; // ADDI
         // memory[5] = 32'h00534293; // XORI
         // memory[6] = 32'h00537293; // ANDI
         // memory[7] = 32'h00536293; // ORI
@@ -48,6 +48,7 @@ module InstructionMemory (
         // memory[3] = 32'h01432283; // LW 2
         // memory[3] = 32'h00931283; // LH
         // memory[4] = 32'h00930283; // LB
+        memory[1] = 32'h00731463; // BNE
         memory[2] = 32'h008324a3; // SW
         memory[3] = 32'h008314a3; // SH
         memory[4] = 32'h008304a3; // SB
@@ -56,6 +57,6 @@ module InstructionMemory (
         memory[7] = 32'h00536293; // ORI
     end
 
-    assign instruction = (address < 64) ? memory[address] : 32'h00000000; // Default to NOP if address is out of range
+    assign instruction = (address < 64) ? memory[address[31:2]] : 32'h00000000; // Default to NOP if address is out of range
     
 endmodule

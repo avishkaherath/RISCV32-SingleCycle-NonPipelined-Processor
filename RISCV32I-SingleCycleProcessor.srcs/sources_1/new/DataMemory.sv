@@ -71,10 +71,10 @@ module DataMemory (
             if (memWrite) begin     // Write to memory when memWrite = 1
                 case (data_sel)
                     3'b000: // SB (Store Byte)       
-                        memory[address] <= {24'b0, write_data[7:0]};
+                        memory[address] <= {write_data[7]? {24{1'b1}}: {24{1'b0}}, write_data[7:0]};
 
                     3'b001: // SH (Store Halfword)
-                        memory[address] <= {16'b0, write_data[15:0]};
+                        memory[address] <= {write_data[15]? {16{1'b1}}: {16{1'b0}}, write_data[15:0]};
 
                     3'b010: // SW (Store Word)
                         memory[address] <= write_data;
