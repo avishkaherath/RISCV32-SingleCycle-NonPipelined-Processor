@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Oct 16 22:14:52 2023
-# Process ID: 12768
+# Start of session at: Mon Oct 16 23:13:46 2023
+# Process ID: 7736
 # Current directory: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1
 # Command line: vivado.exe -log RISCV32I.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV32I.tcl
 # Log file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1/RISCV32I.vds
@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23004
+INFO: [Synth 8-7075] Helper process launched with PID 17860
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1145.250 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1144.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'RISCV32I' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RISCV32I.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/PC.sv:3]
@@ -30,7 +30,7 @@ INFO: [Synth 8-6155] done synthesizing module 'RegFile' (3#1) [C:/Users/acham/Do
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ALU.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (4#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ALU.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'ControllerROM' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:31]
+INFO: [Synth 8-226] default block is never used [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:30]
 INFO: [Synth 8-6155] done synthesizing module 'ControllerROM' (5#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ImmGen.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (6#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ImmGen.sv:3]
@@ -45,21 +45,21 @@ INFO: [Synth 8-6157] synthesizing module 'BranchComparator' [C:/Users/acham/Docu
 INFO: [Synth 8-6155] done synthesizing module 'BranchComparator' (10#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/BranchComparator.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'RISCV32I' (11#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RISCV32I.sv:3]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1145.250 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1144.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1145.250 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1144.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1145.250 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1144.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-2
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1145.250 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1144.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ DSP Report: Generating DSP ALUout0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
 DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:29 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:08 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -143,13 +143,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:29 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:08 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:36 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:01:12 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -167,37 +167,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:40 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:01:15 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:40 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:01:15 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:41 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:01:15 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:41 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:42 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:42 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -241,18 +241,18 @@ Report Instance Areas:
 |5     |  regFile |RegFile    |   342|
 +------+----------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:42 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:42 . Memory (MB): peak = 1222.102 ; gain = 76.852
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:42 . Memory (MB): peak = 1222.102 ; gain = 76.852
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 1222.461 ; gain = 77.855
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1222.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1222.461 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 240 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1222.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1222.461 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -260,7 +260,7 @@ Synth Design complete, checksum: fd771c8a
 INFO: [Common 17-83] Releasing license: Synthesis
 36 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:45 . Memory (MB): peak = 1222.102 ; gain = 76.852
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:19 . Memory (MB): peak = 1222.461 ; gain = 77.855
 INFO: [Common 17-1381] The checkpoint 'C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1/RISCV32I.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RISCV32I_utilization_synth.rpt -pb RISCV32I_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 22:16:45 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 23:15:10 2023...

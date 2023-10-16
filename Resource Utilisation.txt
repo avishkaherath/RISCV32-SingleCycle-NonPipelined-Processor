@@ -1,13 +1,13 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon Oct 16 23:15:09 2023
+| Date         : Mon Oct 16 23:18:13 2023
 | Host         : DESKTOP-6VB9S19 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file RISCV32I_utilization_synth.rpt -pb RISCV32I_utilization_synth.pb
+| Command      : report_utilization -file {C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/Resource Utilisation.txt} -name {Resource Utilisation}
 | Design       : RISCV32I
 | Device       : 7z010clg400-2
 | Design State : Synthesized
------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
