@@ -10,7 +10,7 @@ module DataMemory (
     parameter MEM_SIZE = 64;    // No. of memory blocks
 
     logic [31:0] memory [0:MEM_SIZE-1] = '{default: 32'h0};
-    assign readData = 32'b0;
+    // assign readData = 32'b0;
 
     initial begin   // For testing
         memory[16] = 32'h362CE5B7; // Initialize register x16
@@ -34,6 +34,7 @@ module DataMemory (
                 default: readData = memory[address];        
             endcase
         end
+        else readData = memory[address];
     end
 
     always_ff @(posedge clk) begin
