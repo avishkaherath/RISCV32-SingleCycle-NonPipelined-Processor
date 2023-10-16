@@ -24,10 +24,17 @@ module ControllerROM(
             I_TYPE_OPCODE: controlSignal = {12'b11_00_0_00_01_010, funct7[5], funct3};
             LOAD_OPCODE: controlSignal = {12'b11_10_0_00_00, funct3, 4'b0000};
             STORE_OPCODE: controlSignal = {12'b01_01_0_00_ZZ, funct3, 4'b0000};
-            B_TYPE_OPCODE: controlSignal = {4'b01_00, funct3[1], 1'b0, *, 9'bZZ_ZZZ_1111};
-            JALR_OPCODE: controlSignal = {16'b10_00_Z_10_10_ZZZ_0000};
+            B_TYPE_OPCODE: case ({funct3[2], funct3[0]})
+                2'b00: controlSignal = {4'b01_00, funct3[1], 1'b0, branchEq, 9'bZZ_ZZZ_1111};   // BEQ
+                2'b01: controlSignal = {4'b01_00, funct3[1], 1'b0, ~branchEq, 9'bZZ_ZZZ_1111};  // BNE
+                2'b10: controlSignal = {4'b01_00, funct3[1], 1'b0, branchLT, 9'bZZ_ZZZ_1111};   // BLT, BLTU
+                2'b11: controlSignal = {4'b01_00, funct3[1], 1'b0, ~branchLT, 9'bZZ_ZZZ_1111};  // BGE, BGEU
+                default: controlSignal = {4'b01_00, funct3[1], 2'b00, 9'bZZ_ZZZ_1111};  // Default - no branch
+            endcase
+            JALR_OPCODE: controlSignal = {16'b11_00_Z_10_10_ZZZ_0000};
             default: controlSignal = {16'b1_0_0_0_0_00_01_000_0000};    // regWrite, branchSel, memRead, memWrite, unsignedComp, branch, writeSel, dataSel, ALUop
         endcase
     end
 
 endmodule
+

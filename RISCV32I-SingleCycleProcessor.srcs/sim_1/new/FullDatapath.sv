@@ -22,30 +22,17 @@
 
 module FullDatapath;
 
-    logic clk = 1;
-    logic rst_pc = 0;
-    logic [1:0] branch = 2'b00;
-    logic [31:0] address;
-    logic [31:0] instruction;
-    logic rst_reg = 1;
-    logic rst_mem = 1;
-    logic write_enable = 1;
-    logic [31:0] read_data_1, read_data_2, alu_B, write_data;
-    logic [31:0] ALU_out;
-    logic zero, memRead, memWrite;
-    logic BSel, BrUn, BrEq, BrLT;
-    logic [1:0] WSel;
-    logic [3:0] ALUOp;
-    logic [2:0] readSel;
-    logic [15:0] signal;
-    logic [31:0] immediate, data_out;
+    logic clk = 1, rstPC = 0, rstReg = 1, rstMem = 1;
+    logic zero, BrEq, BrLT;
+    logic [15:0] controllerOut;
+    logic [31:0] address, instruction, readData1, readData2, ALUinB, writeData, ALUout, immediate, dataOut; 
 
     // Instantiate the PC module
     PC pc_inst (
         .clk(clk),
-        .reset(rst_pc),
-        .branch(signal[10:9]),
-        .offset(ALU_out),
+        .reset(rstPC),
+        .branch(controllerOut[10:9]),
+        .offset(ALUout),
         .PCout(address)
     );
 
@@ -57,21 +44,21 @@ module FullDatapath;
 
     RegFile reg_file (
         .clk(clk),
-        .reset(rst_reg),
+        .reset(rstReg),
         .readReg1(instruction[19:15]),
         .readReg2(instruction[24:20]),
         .writeReg(instruction[11:7]),
-        .writeEn(signal[15]),
-        .writeData(write_data),
-        .readData1(read_data_1),
-        .readData2(read_data_2)
+        .writeEn(controllerOut[15]),
+        .writeData(writeData),
+        .readData1(readData1),
+        .readData2(readData2)
     );
 
     ALU alu (
-        .inA(read_data_1),
-        .inB(alu_B),
-        .ALUop(signal[3:0]),
-        .ALUout(ALU_out),
+        .inA(readData1),
+        .inB(ALUinB),
+        .ALUop(controllerOut[3:0]),
+        .ALUout(ALUout),
         .zero(zero)
     );
 
@@ -79,23 +66,8 @@ module FullDatapath;
         .branchEq(BrEq),
         .branchLT(BrLT),
         .instruction(instruction),
-        .controlSignal(signal)
+        .controlSignal(controllerOut)
     );
-
-    // Controller cntrl (
-    //     .instruction(instruction),
-    //     .regWrite(write_enable),
-    //     .branchSel(BSel),
-    //     .writeSel(WSel),
-    //     .ALUop(ALUOp),
-    //     .dataSel(readSel),
-    //     .memRead(memRead),
-    //     .memWrite(memWrite),
-    //     .branch(branch),
-    //     .unsignedComp(BrUn),
-    //     .branchEq(BrEq),
-    //     .branchLT(BrLT)
-    // );
 
     ImmGen immgen (
         .instruction(instruction),
@@ -103,35 +75,35 @@ module FullDatapath;
     );
 
     Mux2 bmux (
-        .data0(read_data_2),
+        .data0(readData2),
         .data1(immediate),
-        .select(signal[14]),
-        .dataout(alu_B)
+        .select(controllerOut[14]),
+        .dataout(ALUinB)
     );
 
     DataMemory dataMem(
-        .address(ALU_out),
-        .writeData(read_data_2),
-        .memRead(signal[13]),
-        .memWrite(signal[12]),
-        .readData(data_out),
+        .address(ALUout),
+        .writeData(readData2),
+        .memRead(controllerOut[13]),
+        .memWrite(controllerOut[12]),
+        .readData(dataOut),
         .clk(clk),
-        .reset(rst_mem),
-        .dataSel(signal[6:4])
+        .reset(rstMem),
+        .dataSel(controllerOut[6:4])
     );
 
     Mux4 wmux (
-        .data0(data_out),
-        .data1(ALU_out),
+        .data0(dataOut),
+        .data1(ALUout),
         .data2(address),
-        .select(signal[8:7]),
-        .dataout(write_data)
+        .select(controllerOut[8:7]),
+        .dataout(writeData)
     );
 
     BranchComparator branComp (
-        .inA(read_data_1),
-        .inB(read_data_2),
-        .unsignedComp(signal[11]),
+        .inA(readData1),
+        .inB(readData2),
+        .unsignedComp(controllerOut[11]),
         .equal(BrEq),
         .lessThan(BrLT)
     );
@@ -146,9 +118,9 @@ module FullDatapath;
 
     // Testbench behavior (for simulation)
     initial begin
-        rst_pc = 1;
+        rstPC = 1;
         #7
-        rst_pc = 0;
+        rstPC = 0;
         #3
 
         #80
