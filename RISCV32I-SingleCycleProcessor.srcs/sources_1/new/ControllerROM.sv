@@ -21,7 +21,10 @@ module ControllerROM(
     always_comb begin
         case (opcode)
             R_TYPE_OPCODE: controlSignal = {12'b10_00_0_00_01_010, funct7[5], funct3};
-            I_TYPE_OPCODE: controlSignal = {12'b11_00_0_00_01_010, funct7[5], funct3};
+            I_TYPE_OPCODE: case (funct3)
+                3'b101: controlSignal = {12'b11_00_0_00_01_010, funct7[5], funct3}; 
+                default: controlSignal = {12'b11_00_0_00_01_010, 1'b0, funct3};
+            endcase
             LOAD_OPCODE: controlSignal = {12'b11_10_0_00_00, funct3, 4'b0000};
             STORE_OPCODE: controlSignal = {12'b01_01_0_00_ZZ, funct3, 4'b0000};
             B_TYPE_OPCODE: case ({funct3[2], funct3[0]})
@@ -32,9 +35,9 @@ module ControllerROM(
                 default: controlSignal = {4'b01_00, funct3[1], 2'b00, 9'bZZ_ZZZ_1111};  // Default - no branch
             endcase
             JALR_OPCODE: controlSignal = {16'b11_00_Z_10_10_ZZZ_0000};
+
             default: controlSignal = {16'b1_0_0_0_0_00_01_000_0000};    // regWrite, branchSel, memRead, memWrite, unsignedComp, branch, writeSel, dataSel, ALUop
         endcase
     end
 
 endmodule
-

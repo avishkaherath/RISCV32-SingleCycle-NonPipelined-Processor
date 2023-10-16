@@ -1,12 +1,13 @@
 `timescale 1ns / 1ps
 
 module RISCV32I(
-    input logic clk, rstPC, rstReg, rstMem
+    input logic clk, rstPC, rstReg, rstMem,
+    output logic [31:0] writeData
 );
 
     logic zero, BrEq, BrLT;
     logic [15:0] controllerOut;
-    logic [31:0] address, instruction, readData1, readData2, ALUinB, writeData, ALUout, immediate, dataOut; 
+    logic [31:0] address, instruction, readData1, readData2, ALUinB, ALUout, immediate, dataOut; 
 
     PC pc (
         .clk(clk),
@@ -75,6 +76,7 @@ module RISCV32I(
         .data0(dataOut),
         .data1(ALUout),
         .data2(address),
+        .data3(0),
         .select(controllerOut[8:7]),
         .dataout(writeData)
     );

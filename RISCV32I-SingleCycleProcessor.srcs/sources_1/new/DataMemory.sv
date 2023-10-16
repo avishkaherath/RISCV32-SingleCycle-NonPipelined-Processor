@@ -9,13 +9,12 @@ module DataMemory (
 
     parameter MEM_SIZE = 64;    // No. of memory blocks
 
-    logic [31:0] memory [0:MEM_SIZE-1] = '{default: 32'h0};
-    // assign readData = 32'b0;
+    logic [31:0] memory [0:MEM_SIZE-1];
 
-    initial begin   // For testing
-        memory[16] = 32'h362CE5B7; // Initialize register x16
-        memory[7] = 32'd3; // Initialize register x7
-    end
+    // initial begin   // For testing
+    //     memory[16] = 32'h362CE5B7; // Initialize register x16
+    //     memory[7] = 32'd3; // Initialize register x7
+    // end
 
     always_comb begin
         if (memRead) begin    // Read from memory when memRead = 1

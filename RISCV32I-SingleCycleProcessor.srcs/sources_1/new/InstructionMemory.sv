@@ -7,7 +7,7 @@ module InstructionMemory (
 
     parameter MEM_SIZE = 64;    // No. of memory blocks
 
-    logic [31:0] memory [0:MEM_SIZE-1] = '{default: 32'h0}; // Memory as an array of n(MEM_SIZE) 32-bit instructions
+    logic [31:0] memory [0:MEM_SIZE-1]; // Memory as an array of n(MEM_SIZE) 32-bit instructions
 
     // R-type instructions
     initial begin
@@ -29,8 +29,9 @@ module InstructionMemory (
         // memory[3] = 32'h01432283; // LW 2
         // memory[3] = 32'h00931283; // LH
         // memory[4] = 32'h00930283; // LB
-        memory[1] = 32'h00731463; // BNE
+        // memory[1] = 32'h00731463; // BNE
         // memory[1] = 32'h008302e7; // JALR
+        memory[1] = 32'h407312b3; // MUL
         memory[2] = 32'h008324a3; // SW
         memory[3] = 32'h008314a3; // SH
         memory[4] = 32'h008304a3; // SB

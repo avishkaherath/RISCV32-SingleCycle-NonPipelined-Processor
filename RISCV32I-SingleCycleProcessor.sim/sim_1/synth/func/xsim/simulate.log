@@ -1,0 +1,2 @@
+Time resolution is 1 ps
+$finish called at time : 90 ns : File "C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/RISCV32I_tb.sv" Line 31

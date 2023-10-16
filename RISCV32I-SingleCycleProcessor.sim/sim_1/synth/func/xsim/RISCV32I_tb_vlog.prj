@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"RISCV32I_tb_func_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../RISCV32I-SingleCycleProcessor.srcs/sim_1/new/RISCV32I_tb.sv" \
+
+# Do not sort compile order
+nosort

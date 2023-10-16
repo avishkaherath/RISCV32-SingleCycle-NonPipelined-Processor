@@ -31,6 +31,8 @@ module ALU (
             4'b0110: ALUout = inA | inB;
                 // AND operation
             4'b0111: ALUout = inA & inB;
+                // MUL operation
+            4'b1001: ALUout = inA * inB;
                 // Default case (Pass InB to ALUout)
             default: ALUout = inB;
         endcase
