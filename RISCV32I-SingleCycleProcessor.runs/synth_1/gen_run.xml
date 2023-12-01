@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-2" LaunchTime="1697478223">
-  <File Type="PA-TCL" Name="RISCV32I.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="RISCV32I_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="RISCV32I_reports.tcl"/>
-  <File Type="RDS-RDS" Name="RISCV32I.vds"/>
-  <File Type="RDS-UTIL" Name="RISCV32I_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="RISCV32I_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="RISCV32I.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RISCV32I_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RISCV32I_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1701460520">
+  <File Type="PA-TCL" Name="ProcessorSingleCycle.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ProcessorSingleCycle_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ProcessorSingleCycle_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ProcessorSingleCycle.vds"/>
+  <File Type="RDS-UTIL" Name="ProcessorSingleCycle_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ProcessorSingleCycle_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ProcessorSingleCycle.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ProcessorSingleCycle_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ProcessorSingleCycle_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.sv">
@@ -19,6 +19,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/BranchComparator.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ClockDivider.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -74,6 +81,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/RISCV32I.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/RegFile.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -81,7 +95,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/RISCV32I.sv">
+    <File Path="$PSRCDIR/sources_1/new/ProcessorSingleCycle.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -98,11 +112,19 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RISCV32I"/>
+      <Option Name="TopModule" Val="ProcessorSingleCycle"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/RISCV32-SingleCycle-NonPipelined-Processor/Zybo-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Zybo-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1701445484"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

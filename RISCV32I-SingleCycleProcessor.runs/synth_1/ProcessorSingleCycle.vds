@@ -1,0 +1,405 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Dec  2 01:25:23 2023
+# Process ID: 23056
+# Current directory: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1
+# Command line: vivado.exe -log ProcessorSingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ProcessorSingleCycle.tcl
+# Log file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1/ProcessorSingleCycle.vds
+# Journal file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ProcessorSingleCycle.tcl -notrace
+Command: synth_design -top ProcessorSingleCycle -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22240
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1136.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ProcessorSingleCycle' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ProcessorSingleCycle.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ClockDivider.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (1#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ClockDivider.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'RISCV32I' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RISCV32I.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/PC.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/PC.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/InstructionMemory.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (3#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/InstructionMemory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RegFile.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (4#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RegFile.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ALU.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ALU.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ControllerROM' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'ControllerROM' (6#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ControllerROM.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ImmGen.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (7#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ImmGen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Mux2' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Mux2.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Mux2' (8#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Mux2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/DataMemory.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (9#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/DataMemory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Mux4' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Mux4.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Mux4.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'Mux4' (10#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/Mux4.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'BranchComparator' [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/BranchComparator.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'BranchComparator' (11#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/BranchComparator.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV32I' (12#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/RISCV32I.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ProcessorSingleCycle' (13#1) [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ProcessorSingleCycle.sv:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1136.195 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/constrs_1/imports/RISCV32-SingleCycle-NonPipelined-Processor/Zybo-Master.xdc]
+Finished Parsing XDC File [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/constrs_1/imports/RISCV32-SingleCycle-NonPipelined-Processor/Zybo-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/constrs_1/imports/RISCV32-SingleCycle-NonPipelined-Processor/Zybo-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ProcessorSingleCycle_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ProcessorSingleCycle_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1173.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1173.531 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 108   
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 344   
+	   4 Input   32 Bit        Muxes := 65    
+	   3 Input   32 Bit        Muxes := 1     
+	  33 Input   32 Bit        Muxes := 2     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 322   
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ALU.sv:35]
+DSP Report: Generating DSP ALUout0, operation Mode is: A*B.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: Generating DSP ALUout0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: Generating DSP ALUout0, operation Mode is: A*B.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: Generating DSP ALUout0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+DSP Report: operator ALUout0 is absorbed into DSP ALUout0.
+INFO: [Synth 8-5546] ROM "controller/controlSignal0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "controller/controlSignal0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port instruction[19] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[18] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[17] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[16] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[15] in module ImmGen is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][8]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][8]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][8]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][8]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][8]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][8]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][8]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][8]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][8]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][8]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][9]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][9]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][9]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][9]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][9]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][10]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][10]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][10]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][10]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][11]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][25]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][26]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][27]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][28]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][29]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[9][7]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[8][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[7][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[6][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[5][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[4][7]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[3][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[2][7]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[1][7]' (FDSE) to 'instMem/memory_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'instMem/memory_reg[0][7]' (FDRE) to 'instMem/memory_reg[9][2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instMem/memory_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\instMem/memory_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (regFile/\registers_reg[16][30] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:29 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:35 . Memory (MB): peak = 1173.531 ; gain = 37.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:36 . Memory (MB): peak = 1183.656 ; gain = 47.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:42 . Memory (MB): peak = 1347.031 ; gain = 210.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:46 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:46 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:46 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:46 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:47 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:47 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    32|
+|3     |LUT1   |    35|
+|4     |LUT2   |   174|
+|5     |LUT3   |   517|
+|6     |LUT4   |   416|
+|7     |LUT5   |   669|
+|8     |LUT6   |  2318|
+|9     |MUXF7  |   117|
+|10    |MUXF8  |    43|
+|11    |FDRE   |  1525|
+|12    |FDSE   |  1066|
+|13    |IBUF   |     7|
+|14    |OBUF   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:47 . Memory (MB): peak = 1362.660 ; gain = 226.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:45 . Memory (MB): peak = 1362.660 ; gain = 189.129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:48 . Memory (MB): peak = 1362.660 ; gain = 226.465
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1362.660 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1362.660 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 5e537f7d
+INFO: [Common 17-83] Releasing license: Synthesis
+151 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 1362.660 ; gain = 226.465
+INFO: [Common 17-1381] The checkpoint 'C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/synth_1/ProcessorSingleCycle.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ProcessorSingleCycle_utilization_synth.rpt -pb ProcessorSingleCycle_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  2 01:27:22 2023...

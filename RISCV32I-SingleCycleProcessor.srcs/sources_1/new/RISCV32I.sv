@@ -1,13 +1,14 @@
 `timescale 1ns / 1ps
 
 module RISCV32I(
-    input logic clk, rstPC, rstReg, rstMem,
-    output logic [31:0] writeData
+    input logic clk, rstPC, rstData,
+    input logic [3:0] sw,
+    output logic [3:0] LED
 );
 
     logic zero, BrEq, BrLT;
     logic [15:0] controllerOut;
-    logic [31:0] address, instruction, readData1, readData2, ALUinB, ALUout, immediate, dataOut; 
+    logic [31:0] address, instruction, readData1, readData2, ALUinB, ALUout, immediate, dataOut, writeData; 
 
     PC pc (
         .clk(clk),
@@ -18,13 +19,15 @@ module RISCV32I(
     );
 
     InstructionMemory instMem (
+        .clk(clk),
+        .reset(rstPC),
         .address(address),
         .instruction(instruction)
     );
 
     RegFile regFile (
         .clk(clk),
-        .reset(rstReg),
+        .reset(rstData),
         .readReg1(instruction[19:15]),
         .readReg2(instruction[24:20]),
         .writeReg(instruction[11:7]),
@@ -66,9 +69,11 @@ module RISCV32I(
         .writeData(readData2),
         .memRead(controllerOut[13]),
         .memWrite(controllerOut[12]),
+        .dataRead(sw),
+        .dataLED(LED),
         .readData(dataOut),
         .clk(clk),
-        .reset(rstMem),
+        .reset(rstData),
         .dataSel(controllerOut[6:4])
     );
 

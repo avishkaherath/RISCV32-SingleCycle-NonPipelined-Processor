@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RISCV32I.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV32I.tcl
+EAStep vivado -log ProcessorSingleCycle.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ProcessorSingleCycle.tcl

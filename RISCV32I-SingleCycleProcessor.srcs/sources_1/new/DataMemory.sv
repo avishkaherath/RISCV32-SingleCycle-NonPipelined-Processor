@@ -3,7 +3,9 @@
 module DataMemory (
     input logic clk, reset, memRead, memWrite,
     input logic [2:0] dataSel,
+    input logic [3:0] dataRead,
     input logic [31:0] address, writeData,
+    output logic [3:0] dataLED,
     output logic [31:0] readData
 );
 
@@ -37,7 +39,7 @@ module DataMemory (
     end
 
     always_ff @(posedge clk) begin
-        if (reset == 0) begin   // Reset the memory to all zeros                        
+        if (reset == 1) begin   // Reset the memory to all zeros                        
             memory = '{default: 32'h0};
         end
         else begin
@@ -55,5 +57,9 @@ module DataMemory (
             end
         end
     end
+
+    always @(*) begin
+        dataLED <= memory[{{28{1'b0}}, dataRead}][3:0];
+    end 
 
 endmodule

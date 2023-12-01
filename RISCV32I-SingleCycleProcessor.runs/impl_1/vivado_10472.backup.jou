@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Dec  2 01:28:48 2023
+# Process ID: 10472
+# Current directory: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/impl_1
+# Command line: vivado.exe -log ProcessorSingleCycle.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ProcessorSingleCycle.tcl -notrace
+# Log file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/impl_1/ProcessorSingleCycle.vdi
+# Journal file: C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ProcessorSingleCycle.tcl -notrace

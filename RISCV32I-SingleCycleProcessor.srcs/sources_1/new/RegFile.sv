@@ -26,7 +26,7 @@ module RegFile (
 
     // Write data to the registers
     always_ff @(posedge clk) begin
-        if (reset == 0) registers = '{default: 32'h0};  // Synchronous active low reset     
+        if (reset == 1) registers = '{default: 32'h0};  // Synchronous active high reset     
         else if (writeEn) begin
             if (writeReg != 5'b0) registers[writeReg] <= writeData;
         end

@@ -2,13 +2,13 @@
 
 module RISCV32I_tb;
 
-    logic clk = 1, rstPC = 0, rstReg = 1, rstMem = 1;
+    logic clk = 1, rstPC = 0, rstReg = 0;
 
     RISCV32I processor (
         .clk(clk),
         .rstPC(rstPC),
-        .rstReg(rstReg),
-        .rstMem(rstMem)
+        .rstData(rstReg),
+        .sw(4'b0000)
     );
 
     // Clock generation
@@ -26,7 +26,7 @@ module RISCV32I_tb;
         rstPC = 0;
         #3
 
-        #80
+        #100
         // Finish the simulation
         $finish;
     end
