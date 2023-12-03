@@ -31,51 +31,43 @@ module R_Type;
     logic rst_reg = 1;
     logic write_enable;
     logic [31:0] read_data_1, read_data_2;
-    // logic [3:0] ALU_op;
     logic [31:0] ALU_out;
     logic zero;
     logic BSel = 0;
-    // logic RegWrite;
-    // logic MemtoReg, RegtoMem;
     logic [3:0] ALUOp;
-    // logic ALUSrc;
-    // logic MemWrite;
-    // logic Branch;
-    // logic MemRead;
 
-
-    // Instantiate the PC module
     PC pc_inst (
         .clk(clk),
         .reset(reset),
         .branch(branch),
-        .branch_offset(branch_offset),
-        .pc_out(address)
+        .offset(branch_offset),
+        .PCout(address)
     );
 
-    // Instantiate the InstructionMemory module
     InstructionMemory inst_mem (
+        .clk(clk),
+        .reset(reset),
         .address(address),
         .instruction(instruction)
     );
 
     RegFile reg_file (
         .clk(clk),
-        .rst_n(rst_reg),
-        .read_register_1(instruction[19:15]),
-        .read_register_2(instruction[24:20]),
-        .write_register(instruction[11:7]),
-        .write_enable(write_enable),
-        .write_data(ALU_out),
-        .read_data_1(read_data_1),
-        .read_data_2(read_data_2)
+        .reset(rst_reg),
+        .readReg1(instruction[19:15]),
+        .readReg2(instruction[24:20]),
+        .writeReg(instruction[11:7]),
+        .writeEn(write_enable),
+        .writeData(ALU_out),
+        .readData1(read_data_1),
+        .readData2(read_data_2)
     );
 
     ALU alu (
-        .A(read_data_1),
-        .B(read_data_2),
-        .ALU_op(ALUOp),
-        .ALU_out(ALU_out),
+        .inA(read_data_1),
+        .inB(read_data_2),
+        .ALUop(ALUOp),
+        .ALUout(ALU_out),
         .zero(zero)
     );
 
@@ -83,13 +75,7 @@ module R_Type;
         .instruction(instruction),
         .RegWrite(write_enable),
         .BSel(BSel),
-        // .MemtoReg(MemtoReg),
-        // .RegtoMem(RegtoMem),
         .ALUOp(ALUOp)
-        // .ALUSrc(ALUSrc),
-        // .MemWrite(MemWrite),
-        // .Branch(Branch),
-        // .MemRead(MemRead)
     );
 
     // Clock generation
@@ -100,7 +86,7 @@ module R_Type;
         #5;
     end
 
-    // Testbench behavior (for simulation)
+    // Start simulation
     initial begin
         reset = 1;
         #7

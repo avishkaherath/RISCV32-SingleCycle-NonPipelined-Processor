@@ -1,0 +1,7 @@
+0.7
+2020.2
+Jun 10 2021
+20:04:57
+C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.sim/sim_1/impl/timing/xsim/ClockDivider_tb_time_impl.v,1701569522,verilog,,,,ALU;DataMemory;PC;ProcessorSingleCycle;RISCV32I;RegFile;glbl,,uvm,,,,,,
+C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/ClockDivider_tb.sv,1701532765,systemVerilog,,,,ClockDivider_tb,,uvm,,,,,,
+C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sources_1/new/ClockDivider.sv,1701536005,systemVerilog,,C:/Users/acham/Documents/GitHub/RISCV32-SingleCycle-NonPipelined-Processor/RISCV32I-SingleCycleProcessor.srcs/sim_1/new/ClockDivider_tb.sv,,ClockDivider,,uvm,,,,,,

@@ -1,12 +1,13 @@
 `timescale 1ns / 1ps
 
-module ClockDivider (
+module ClockDivider #(parameter FREQ = 62500000) // 62.5MHz Clock;
+(
     input logic onboard_clk, // input clock
     output logic clk // output clock
 );
 
     // Divider ratio
-    parameter COUNT_MAX = 1250000;
+    localparam COUNT_MAX =  125000000 / (FREQ * 2) - 1; // 125MHz Board Clock
 
     // Internal counter
     logic [31:0] counter = 32'd0;

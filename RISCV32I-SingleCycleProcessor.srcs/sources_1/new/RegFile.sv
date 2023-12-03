@@ -18,11 +18,11 @@ module RegFile (
         registers[0] = 32'd0; // Zero register
     end 
 
-    // initial begin   // For testing
-    //     registers[6] = 32'd7; // Initialize register x6
-    //     registers[7] = 32'd10; // Initialize register x7
-    //     registers[8] = 32'h01CF5E5B; // Initialize register x8
-    // end
+    initial begin   // For testing
+        registers[6] = 32'd7; // Initialize register x6
+        registers[7] = 32'd10; // Initialize register x7
+        registers[8] = 32'h01CF5E5B; // Initialize register x8
+    end
 
     // Write data to the registers
     always_ff @(posedge clk) begin

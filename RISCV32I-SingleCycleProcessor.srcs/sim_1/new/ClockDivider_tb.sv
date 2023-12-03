@@ -13,14 +13,15 @@ module ClockDivider_tb;
 
     // Clock generation
     initial begin
-        onboard_clk = 0;
+        clk = 0;
+        onboard_clk = 1;
         forever #4 onboard_clk = ~onboard_clk;
     end
 
     // Simulation time
     initial begin
         // Simulate for 1 ms
-        #40000000;
+        #300;
 
         // End simulation
         $finish;

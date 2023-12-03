@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Dec  2 01:29:18 2023
+| Date         : Sun Dec  3 10:39:21 2023
 | Host         : DESKTOP-6VB9S19 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file ProcessorSingleCycle_control_sets_placed.rpt
 | Design       : ProcessorSingleCycle
@@ -76,160 +76,160 @@ Table of Contents
 |  onboard_clk_IBUF_BUFG |                                  |                                       |                1 |              2 |         2.00 |
 |  clk_BUFG              |                                  |                                       |                2 |              3 |         1.50 |
 |  clk_BUFG              | riscDatapath/pc/rstData_23       | riscDatapath/alu/rstData_42           |                1 |              5 |         5.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_37       | riscDatapath/alu/rstData_44           |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_59      | riscDatapath/pc/rstData_17            |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/pc/rstData_29       | riscDatapath/pc/rstData_18            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_30       | riscDatapath/alu/rstData_34           |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_50      | riscDatapath/pc/memory[14][7]_i_1     |                2 |              7 |         3.50 |
 |  clk_BUFG              | riscDatapath/alu/rstData_51      |                                       |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_47      | riscDatapath/alu/memory[12][7]_i_1_0  |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/pc/rstData_25       | riscDatapath/alu/rstData_28           |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_24      | riscDatapath/alu/memory[16][7]_i_1_0  |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_55      |                                       |                4 |              7 |         1.75 |
-|  clk_BUFG              | riscDatapath/alu/rstData_41      | riscDatapath/alu/memory[28][7]_i_1_0  |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_54      | riscDatapath/pc/memory[56][7]_i_1_0   |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_34       | riscDatapath/alu/rstData_16           |                3 |              7 |         2.33 |
+|  clk_BUFG              | riscDatapath/alu/rstData_22      |                                       |                2 |              7 |         3.50 |
 |  clk_BUFG              | riscDatapath/alu/rstData_37      | riscDatapath/alu/memory[13][7]_i_1_1  |                5 |              7 |         1.40 |
 |  clk_BUFG              | riscDatapath/pc/rstData_35       | riscDatapath/alu/rstData_46           |                4 |              7 |         1.75 |
-|  clk_BUFG              | riscDatapath/pc/rstData_32       | riscDatapath/pc/rstData_19            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_54      | riscDatapath/pc/memory[56][7]_i_1_0   |                2 |              7 |         3.50 |
 |  clk_BUFG              | riscDatapath/pc/rstData_36       | riscDatapath/pc/rstData_9             |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_26       | riscDatapath/alu/rstData_10           |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_22      |                                       |                2 |              7 |         3.50 |
 |  clk_BUFG              | riscDatapath/alu/rstData_38      |                                       |                4 |              7 |         1.75 |
-|  clk_BUFG              | riscDatapath/pc/rstData_34       | riscDatapath/alu/rstData_16           |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_29      |                                       |                5 |              7 |         1.40 |
-|  clk_BUFG              | riscDatapath/alu/rstData_50      | riscDatapath/pc/memory[14][7]_i_1     |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/pc/rstData_30       | riscDatapath/alu/rstData_34           |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/alu/rstData_52      | riscDatapath/pc/memory[58][7]_i_1_0   |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/pc/rstData_28       | riscDatapath/alu/rstData_17           |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_27       | riscDatapath/alu/rstData_9            |                2 |              7 |         3.50 |
-|  clk_BUFG              | riscDatapath/alu/rstData_36      | riscDatapath/pc/memory[54][7]_i_1     |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/pc/rstData_31       | riscDatapath/alu/rstData_15           |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/pc/rstData_39       | riscDatapath/pc/rstData_13            |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_31      | riscDatapath/alu/memory[20][7]_i_1_0  |                1 |              7 |         7.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_64      | riscDatapath/alu/rstData_43           |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_41      | riscDatapath/alu/memory[28][7]_i_1_0  |                3 |              7 |         2.33 |
 |  clk_BUFG              | riscDatapath/pc/rstData_33       | riscDatapath/alu/rstData_40           |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_32      |                                       |                4 |              7 |         1.75 |
-|  clk_BUFG              | riscDatapath/alu/rstData_53      | riscDatapath/pc/memory[10][7]_i_1_0   |                3 |              7 |         2.33 |
 |  clk_BUFG              | riscDatapath/alu/rstData_25      | riscDatapath/pc/memory[53][7]_i_1     |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_62      | riscDatapath/pc/rstData_11            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_47      | riscDatapath/alu/memory[12][7]_i_1_0  |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_31       | riscDatapath/alu/rstData_15           |                3 |              7 |         2.33 |
+|  clk_BUFG              | riscDatapath/alu/rstData_32      |                                       |                4 |              7 |         1.75 |
+|  clk_BUFG              | riscDatapath/alu/rstData_24      | riscDatapath/alu/memory[16][7]_i_1_0  |                3 |              7 |         2.33 |
 |  clk_BUFG              | riscDatapath/alu/rstData_27      | riscDatapath/pc/memory[52][7]_i_1     |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_31      | riscDatapath/alu/memory[20][7]_i_1_0  |                1 |              7 |         7.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_29       | riscDatapath/pc/rstData_18            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_29      |                                       |                5 |              7 |         1.40 |
+|  clk_BUFG              | riscDatapath/pc/rstData_28       | riscDatapath/alu/rstData_17           |                1 |              7 |         7.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_36      | riscDatapath/pc/memory[54][7]_i_1     |                3 |              7 |         2.33 |
+|  clk_BUFG              | riscDatapath/alu/rstData_53      | riscDatapath/pc/memory[10][7]_i_1_0   |                3 |              7 |         2.33 |
+|  clk_BUFG              | riscDatapath/alu/rstData_55      |                                       |                4 |              7 |         1.75 |
+|  clk_BUFG              | riscDatapath/alu/rstData_52      | riscDatapath/pc/memory[58][7]_i_1_0   |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_62      | riscDatapath/pc/rstData_11            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_27       | riscDatapath/alu/rstData_9            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_59      | riscDatapath/pc/rstData_17            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_26       | riscDatapath/alu/rstData_10           |                1 |              7 |         7.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_32       | riscDatapath/pc/rstData_19            |                2 |              7 |         3.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_64      | riscDatapath/alu/rstData_43           |                2 |              7 |         3.50 |
 |  clk_BUFG              | riscDatapath/alu/rstData_65      | riscDatapath/pc/memory[19][7]_i_1_0   |                3 |              7 |         2.33 |
-|  clk_BUFG              | riscDatapath/pc/rstData_37       | rstData_IBUF                          |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_52      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_24      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_50      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_59      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_47      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_57      | riscDatapath/pc/memory[6][7]_i_3_0    |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_41      |                                       |                1 |              8 |         8.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_35       | riscDatapath/pc/rstData_8             |                2 |              8 |         4.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_36      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_30      |                                       |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_39       |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_64      | rstData_IBUF                          |                2 |              8 |         4.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_38       | riscDatapath/alu/rstData_21           |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_25       |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_24       | riscDatapath/pc/rstData_1             |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_54      |                                       |                2 |              8 |         4.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_23      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_29       |                                       |                6 |              8 |         1.33 |
-|  clk_BUFG              | riscDatapath/alu/rstData_56      | riscDatapath/pc/memory[2][31]_i_3_0   |                5 |              8 |         1.60 |
-|  clk_BUFG              | riscDatapath/alu/rstData_53      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_20       | riscDatapath/alu/rstData_33           |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_25      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_60      | riscDatapath/alu/rstData_18           |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_31      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_62      |                                       |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_19      | riscDatapath/alu/memory[41][7]_i_3_0  |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_20       | riscDatapath/alu/rstData_11           |                3 |              8 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_27      |                                       |                2 |              8 |         4.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_37      |                                       |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_65      |                                       |                4 |              8 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_20      | riscDatapath/alu/memory[0][7]_i_6_2   |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_39       | riscDatapath/pc/rstData_13            |                1 |              7 |         7.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_25       | riscDatapath/alu/rstData_28           |                1 |              7 |         7.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_37       | riscDatapath/alu/rstData_44           |                3 |              7 |         2.33 |
 |  clk_BUFG              | riscDatapath/alu/rstData_8       | riscDatapath/alu/memory[5][7]_i_3_0   |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_20      | riscDatapath/alu/memory[0][7]_i_6_2   |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_23      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_57      | riscDatapath/pc/memory[6][7]_i_3_0    |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_52      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_20       | riscDatapath/alu/rstData_33           |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_50      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_47      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_54      |                                       |                2 |              8 |         4.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_36      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_25      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_20       | riscDatapath/alu/rstData_11           |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_24       | riscDatapath/pc/rstData_1             |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_30      |                                       |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_25       |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_31      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_29       |                                       |                6 |              8 |         1.33 |
+|  clk_BUFG              | riscDatapath/pc/rstData_35       | riscDatapath/pc/rstData_8             |                2 |              8 |         4.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_53      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_37       | rstData_IBUF                          |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_38       | riscDatapath/alu/rstData_21           |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_59      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_39       |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_60      | riscDatapath/alu/rstData_18           |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_65      |                                       |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_24      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_19      | riscDatapath/alu/memory[41][7]_i_3_0  |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_37      |                                       |                4 |              8 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_41      |                                       |                1 |              8 |         8.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_56      | riscDatapath/pc/memory[2][31]_i_3_0   |                5 |              8 |         1.60 |
+|  clk_BUFG              | riscDatapath/alu/rstData_27      |                                       |                2 |              8 |         4.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_62      |                                       |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_64      | rstData_IBUF                          |                2 |              8 |         4.00 |
 |  clk_BUFG              | riscDatapath/alu/rstData_7       | riscDatapath/alu/memory[38][7]_i_3    |                3 |              8 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_14      |                                       |                8 |             16 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_13      |                                       |                6 |             16 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_13      | riscDatapath/alu/memory[53][7]_i_6_0  |                4 |             16 |         4.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_63      | riscDatapath/alu/rstData_12           |                4 |             16 |         4.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_14      | riscDatapath/alu/memory[62][15]_i_3_0 |                5 |             16 |         3.20 |
 |  clk_BUFG              | riscDatapath/alu/rstData_63      | riscDatapath/alu/rstData_26           |                8 |             16 |         2.00 |
 |  clk_BUFG              | riscDatapath/pc/rstData_20       | riscDatapath/pc/rstData_15            |                9 |             16 |         1.78 |
-|  clk_BUFG              | riscDatapath/alu/rstData_14      | riscDatapath/alu/memory[62][15]_i_3_0 |                5 |             16 |         3.20 |
-|  clk_BUFG              | riscDatapath/alu/rstData_13      |                                       |                6 |             16 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_14      |                                       |                8 |             16 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_63      | riscDatapath/alu/rstData_12           |                4 |             16 |         4.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_13      | riscDatapath/alu/memory[53][7]_i_6_0  |                4 |             16 |         4.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_25      | riscDatapath/alu/memory[53][7]_i_1_0  |                4 |             17 |         4.25 |
-|  clk_BUFG              | riscDatapath/alu/rstData_53      | riscDatapath/pc/memory[10][7]_i_1     |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_36      | riscDatapath/alu/memory[54][7]_i_1_0  |                5 |             17 |         3.40 |
-|  clk_BUFG              | riscDatapath/alu/rstData_24      | riscDatapath/pc/PCreg_reg[5]_355      |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_37      | riscDatapath/alu/memory[13][7]_i_1_0  |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_54      | riscDatapath/pc/memory[56][7]_i_1     |                4 |             17 |         4.25 |
-|  clk_BUFG              | riscDatapath/alu/rstData_41      | riscDatapath/alu/PCreg_reg[5]_221     |               10 |             17 |         1.70 |
-|  clk_BUFG              | riscDatapath/alu/rstData_47      | riscDatapath/pc/PCreg_reg[5]_359      |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_52      | riscDatapath/pc/memory[58][7]_i_1     |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_59      | riscDatapath/pc/rstData_16            |                5 |             17 |         3.40 |
 |  clk_BUFG              | riscDatapath/alu/rstData_50      | riscDatapath/pc/PCreg_reg[5]_358      |                4 |             17 |         4.25 |
+|  clk_BUFG              | riscDatapath/pc/rstData_29       | riscDatapath/alu/rstData_48           |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_62      | riscDatapath/pc/rstData_10            |                6 |             17 |         2.83 |
+|  clk_BUFG              | riscDatapath/alu/rstData_54      | riscDatapath/pc/memory[56][7]_i_1     |                4 |             17 |         4.25 |
 |  clk_BUFG              | riscDatapath/pc/rstData_35       | riscDatapath/alu/PCreg_reg[5]_224     |               11 |             17 |         1.55 |
+|  clk_BUFG              | riscDatapath/alu/rstData_47      | riscDatapath/pc/PCreg_reg[5]_359      |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_31      | riscDatapath/pc/PCreg_reg[5]_357      |                5 |             17 |         3.40 |
+|  clk_BUFG              | riscDatapath/alu/rstData_37      | riscDatapath/alu/memory[13][7]_i_1_0  |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_53      | riscDatapath/pc/memory[10][7]_i_1     |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_64      | riscDatapath/alu/PCreg_reg[5]_222     |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_59      | riscDatapath/pc/rstData_16            |                5 |             17 |         3.40 |
+|  clk_BUFG              | riscDatapath/alu/rstData_41      | riscDatapath/alu/PCreg_reg[5]_221     |               10 |             17 |         1.70 |
+|  clk_BUFG              | riscDatapath/alu/rstData_25      | riscDatapath/alu/memory[53][7]_i_1_0  |                4 |             17 |         4.25 |
+|  clk_BUFG              | riscDatapath/alu/rstData_52      | riscDatapath/pc/memory[58][7]_i_1     |                7 |             17 |         2.43 |
 |  clk_BUFG              | riscDatapath/pc/rstData_25       | riscDatapath/pc/rstData_14            |                5 |             17 |         3.40 |
 |  clk_BUFG              | riscDatapath/alu/rstData_27      | riscDatapath/alu/memory[52][7]_i_1_0  |                3 |             17 |         5.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_29       | riscDatapath/alu/rstData_48           |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_65      | riscDatapath/pc/memory[19][7]_i_1     |               10 |             17 |         1.70 |
-|  clk_BUFG              | riscDatapath/pc/rstData_39       | riscDatapath/pc/rstData_12            |                4 |             17 |         4.25 |
-|  clk_BUFG              | riscDatapath/alu/rstData_62      | riscDatapath/pc/rstData_10            |                6 |             17 |         2.83 |
 |  clk_BUFG              | riscDatapath/pc/rstData_37       | riscDatapath/alu/PCreg_reg[5]_223     |                8 |             17 |         2.12 |
-|  clk_BUFG              | riscDatapath/alu/rstData_31      | riscDatapath/pc/PCreg_reg[5]_357      |                5 |             17 |         3.40 |
-|  clk_BUFG              | riscDatapath/alu/rstData_64      | riscDatapath/alu/PCreg_reg[5]_222     |                7 |             17 |         2.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_19      |                                       |                8 |             24 |         3.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_60      | riscDatapath/alu/rstData_49           |                7 |             24 |         3.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_24      | riscDatapath/pc/PCreg_reg[5]_355      |                7 |             17 |         2.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_36      | riscDatapath/alu/memory[54][7]_i_1_0  |                5 |             17 |         3.40 |
+|  clk_BUFG              | riscDatapath/pc/rstData_39       | riscDatapath/pc/rstData_12            |                4 |             17 |         4.25 |
+|  clk_BUFG              | riscDatapath/alu/rstData_65      | riscDatapath/pc/memory[19][7]_i_1     |               10 |             17 |         1.70 |
+|  clk_BUFG              | riscDatapath/alu/rstData_7       | riscDatapath/alu/memory[38][7]_i_2_0  |               12 |             24 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_57      | riscDatapath/pc/memory[6][7]_i_2      |               11 |             24 |         2.18 |
+|  clk_BUFG              | riscDatapath/alu/rstData_23      | riscDatapath/alu/memory[2][6]_i_1_0   |               10 |             24 |         2.40 |
 |  clk_BUFG              | riscDatapath/pc/rstData_38       | riscDatapath/alu/rstData_35           |                8 |             24 |         3.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_19      |                                       |                8 |             24 |         3.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_8       |                                       |                9 |             24 |         2.67 |
+|  clk_BUFG              | riscDatapath/alu/rstData_60      | riscDatapath/alu/rstData_49           |                7 |             24 |         3.43 |
+|  clk_BUFG              | riscDatapath/alu/rstData_30      | riscDatapath/alu/memory[51][6]_i_1_0  |                4 |             24 |         6.00 |
 |  clk_BUFG              | riscDatapath/alu/rstData_20      |                                       |               11 |             24 |         2.18 |
 |  clk_BUFG              | riscDatapath/pc/rstData_24       | riscDatapath/alu/rstData_45           |                7 |             24 |         3.43 |
-|  clk_BUFG              | riscDatapath/alu/rstData_23      | riscDatapath/alu/memory[2][6]_i_1_0   |               10 |             24 |         2.40 |
-|  clk_BUFG              | riscDatapath/alu/rstData_8       |                                       |                9 |             24 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_57      | riscDatapath/pc/memory[6][7]_i_2      |               11 |             24 |         2.18 |
 |  clk_BUFG              | riscDatapath/alu/rstData_56      | riscDatapath/pc/memory[0][7]_i_2      |               10 |             24 |         2.40 |
-|  clk_BUFG              | riscDatapath/alu/rstData_7       | riscDatapath/alu/memory[38][7]_i_2_0  |               12 |             24 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_30      | riscDatapath/alu/memory[51][6]_i_1_0  |                4 |             24 |         6.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_32       | riscDatapath/pc/rstData_5             |               12 |             25 |         2.08 |
-|  clk_BUFG              | riscDatapath/alu/rstData_55      | riscDatapath/pc/memory[24][6]_i_1     |               11 |             25 |         2.27 |
 |  clk_BUFG              | riscDatapath/pc/rstData_28       | riscDatapath/pc/rstData_3             |                9 |             25 |         2.78 |
+|  clk_BUFG              | riscDatapath/pc/rstData_23       | rstData_IBUF                          |               11 |             25 |         2.27 |
 |  clk_BUFG              | riscDatapath/pc/rstData_34       | riscDatapath/pc/rstData_7             |               13 |             25 |         1.92 |
-|  clk_BUFG              | riscDatapath/alu/rstData_29      | riscDatapath/alu/memory[63][6]_i_1_0  |               12 |             25 |         2.08 |
 |  clk_BUFG              | riscDatapath/pc/rstData_36       | riscDatapath/alu/rstData_39           |               11 |             25 |         2.27 |
-|  clk_BUFG              | riscDatapath/alu/rstData_38      | riscDatapath/alu/memory[26][6]_i_1_0  |               13 |             25 |         1.92 |
-|  clk_BUFG              | riscDatapath/alu/rstData_32      | riscDatapath/alu/memory[50][6]_i_1_0  |               14 |             25 |         1.79 |
+|  clk_BUFG              | riscDatapath/alu/rstData_55      | riscDatapath/pc/memory[24][6]_i_1     |               11 |             25 |         2.27 |
+|  clk_BUFG              | riscDatapath/pc/rstData_30       | rstData_IBUF                          |               11 |             25 |         2.27 |
 |  clk_BUFG              | riscDatapath/pc/rstData_31       | riscDatapath/pc/rstData_4             |                9 |             25 |         2.78 |
-|  clk_BUFG              | riscDatapath/pc/rstData_27       | rstData_IBUF                          |               10 |             25 |         2.50 |
-|  clk_BUFG              | riscDatapath/pc/rstData_33       | riscDatapath/pc/rstData_6             |               13 |             25 |         1.92 |
+|  clk_BUFG              | riscDatapath/pc/rstData_32       | riscDatapath/pc/rstData_5             |               12 |             25 |         2.08 |
+|  clk_BUFG              | riscDatapath/alu/rstData_32      | riscDatapath/alu/memory[50][6]_i_1_0  |               14 |             25 |         1.79 |
+|  clk_BUFG              | riscDatapath/alu/rstData_38      | riscDatapath/alu/memory[26][6]_i_1_0  |               13 |             25 |         1.92 |
 |  clk_BUFG              | riscDatapath/alu/rstData_22      | riscDatapath/alu/memory[15][6]_i_1_0  |                8 |             25 |         3.12 |
 |  clk_BUFG              | riscDatapath/pc/rstData_26       | riscDatapath/pc/rstData_2             |               11 |             25 |         2.27 |
-|  clk_BUFG              | riscDatapath/pc/rstData_30       | rstData_IBUF                          |               11 |             25 |         2.27 |
-|  clk_BUFG              | riscDatapath/pc/rstData_23       | rstData_IBUF                          |               11 |             25 |         2.27 |
 |  clk_BUFG              | riscDatapath/alu/rstData_51      | riscDatapath/pc/memory[1][6]_i_1      |               10 |             25 |         2.50 |
+|  clk_BUFG              | riscDatapath/pc/rstData_27       | rstData_IBUF                          |               10 |             25 |         2.50 |
+|  clk_BUFG              | riscDatapath/alu/rstData_29      | riscDatapath/alu/memory[63][6]_i_1_0  |               12 |             25 |         2.08 |
+|  clk_BUFG              | riscDatapath/pc/rstData_33       | riscDatapath/pc/rstData_6             |               13 |             25 |         1.92 |
 |  clk_BUFG              |                                  | rstPC_IBUF                            |                8 |             30 |         3.75 |
-|  clk_BUFG              | riscDatapath/pc/rstData_21       | riscDatapath/pc/rstData_0             |               13 |             31 |         2.38 |
 |  onboard_clk_IBUF_BUFG |                                  | clock/counter[31]_i_1_n_0             |                8 |             31 |         3.88 |
+|  clk_BUFG              | riscDatapath/pc/rstData_21       | riscDatapath/pc/rstData_0             |               13 |             31 |         2.38 |
+|  clk_BUFG              | riscDatapath/pc/rstData_40       | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/pc/rstData_54       | rstData_IBUF                          |               17 |             32 |         1.88 |
+|  clk_BUFG              | riscDatapath/pc/rstData_46       | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/alu/rstData_1       | riscDatapath/alu/memory[7][31]_i_6_0  |               16 |             32 |         2.00 |
+|  clk_BUFG              | riscDatapath/alu/rstData_0       | riscDatapath/alu/memory[1][31]_i_4    |                9 |             32 |         3.56 |
 |  clk_BUFG              | riscDatapath/pc/rstData_51       | rstData_IBUF                          |               15 |             32 |         2.13 |
 |  clk_BUFG              | riscDatapath/pc/rstData_50       | rstData_IBUF                          |               12 |             32 |         2.67 |
-|  clk_BUFG              | riscDatapath/pc/rstData_41       | rstData_IBUF                          |               14 |             32 |         2.29 |
-|  clk_BUFG              | riscDatapath/alu/rstData_6       | riscDatapath/alu/memory[0][7]_i_4_0   |                8 |             32 |         4.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_49       | rstData_IBUF                          |               12 |             32 |         2.67 |
-|  clk_BUFG              | riscDatapath/alu/rstData_2       | riscDatapath/alu/memory[7][31]_i_6_1  |               10 |             32 |         3.20 |
-|  clk_BUFG              | riscDatapath/pc/rstData_22       | riscDatapath/alu/rstData_4            |                8 |             32 |         4.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_53       | rstData_IBUF                          |               19 |             32 |         1.68 |
-|  clk_BUFG              | riscDatapath/pc/PCreg_reg[5]_381 | rstData_IBUF                          |               13 |             32 |         2.46 |
-|  clk_BUFG              | riscDatapath/pc/rstData_44       | rstData_IBUF                          |               14 |             32 |         2.29 |
-|  clk_BUFG              | riscDatapath/pc/rstData_54       | rstData_IBUF                          |               17 |             32 |         1.88 |
-|  clk_BUFG              | riscDatapath/pc/rstData_43       | rstData_IBUF                          |               13 |             32 |         2.46 |
-|  clk_BUFG              | riscDatapath/alu/rstData_1       | riscDatapath/alu/memory[7][31]_i_6_0  |               16 |             32 |         2.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_42       | rstData_IBUF                          |               16 |             32 |         2.00 |
-|  clk_BUFG              | riscDatapath/alu/rstData_3       | riscDatapath/alu/memory[0][7]_i_6     |               10 |             32 |         3.20 |
-|  clk_BUFG              | riscDatapath/pc/rstData_47       | rstData_IBUF                          |               18 |             32 |         1.78 |
 |  clk_BUFG              | riscDatapath/alu/rstData         | riscDatapath/alu/memory[24][31]_i_3_0 |               17 |             32 |         1.88 |
-|  clk_BUFG              | riscDatapath/alu/rstData_61      |                                       |               14 |             32 |         2.29 |
-|  clk_BUFG              | riscDatapath/alu/rstData_0       | riscDatapath/alu/memory[1][31]_i_4    |                9 |             32 |         3.56 |
-|  clk_BUFG              | riscDatapath/pc/rstData_48       | rstData_IBUF                          |               15 |             32 |         2.13 |
-|  clk_BUFG              | riscDatapath/pc/rstData_45       | rstData_IBUF                          |               13 |             32 |         2.46 |
-|  clk_BUFG              | riscDatapath/alu/rstData_5       | riscDatapath/alu/memory[0][7]_i_4     |                9 |             32 |         3.56 |
-|  clk_BUFG              | riscDatapath/pc/rstData_52       | rstData_IBUF                          |               16 |             32 |         2.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_22       | riscDatapath/alu/rstData_4            |                8 |             32 |         4.00 |
 |  clk_BUFG              | riscDatapath/alu/rstData_58      |                                       |               16 |             32 |         2.00 |
-|  clk_BUFG              | riscDatapath/pc/rstData_40       | rstData_IBUF                          |               13 |             32 |         2.46 |
-|  clk_BUFG              | riscDatapath/pc/rstData_46       | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/pc/rstData_52       | rstData_IBUF                          |               16 |             32 |         2.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_43       | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/pc/rstData_41       | rstData_IBUF                          |               14 |             32 |         2.29 |
+|  clk_BUFG              | riscDatapath/alu/rstData_2       | riscDatapath/alu/memory[7][31]_i_6_1  |               10 |             32 |         3.20 |
+|  clk_BUFG              | riscDatapath/alu/rstData_6       | riscDatapath/alu/memory[0][7]_i_4_0   |                8 |             32 |         4.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_53       | rstData_IBUF                          |               19 |             32 |         1.68 |
+|  clk_BUFG              | riscDatapath/alu/rstData_3       | riscDatapath/alu/memory[0][7]_i_6     |               10 |             32 |         3.20 |
+|  clk_BUFG              | riscDatapath/alu/rstData_61      |                                       |               14 |             32 |         2.29 |
+|  clk_BUFG              | riscDatapath/alu/rstData_5       | riscDatapath/alu/memory[0][7]_i_4     |                9 |             32 |         3.56 |
+|  clk_BUFG              | riscDatapath/pc/rstData_49       | rstData_IBUF                          |               12 |             32 |         2.67 |
+|  clk_BUFG              | riscDatapath/pc/rstData_44       | rstData_IBUF                          |               14 |             32 |         2.29 |
+|  clk_BUFG              | riscDatapath/pc/rstData_45       | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/pc/rstData_47       | rstData_IBUF                          |               18 |             32 |         1.78 |
+|  clk_BUFG              | riscDatapath/pc/PCreg_reg[5]_381 | rstData_IBUF                          |               13 |             32 |         2.46 |
+|  clk_BUFG              | riscDatapath/pc/rstData_42       | rstData_IBUF                          |               16 |             32 |         2.00 |
+|  clk_BUFG              | riscDatapath/pc/rstData_48       | rstData_IBUF                          |               15 |             32 |         2.13 |
 +------------------------+----------------------------------+---------------------------------------+------------------+----------------+--------------+
 
 
